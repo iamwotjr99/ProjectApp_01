@@ -55,4 +55,4 @@ public class Beginscr_activity extends AppCompatActivity {
             }
         });
     }
-}
+}//
