@@ -4,7 +4,7 @@ const router = require('./router');
 const app = express();
 
 app.use(morgan('dev'));
-app.use('/qgis2web', express.static(__dirname + '/qgis2web'));
+app.use('/wotjr', express.static(__dirname + '/qgis2web'));
 app.use(router);
 
 app.listen(3000);

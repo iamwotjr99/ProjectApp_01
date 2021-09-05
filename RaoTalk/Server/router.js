@@ -4,7 +4,7 @@ const path = require('path');
 
 router.get('/', serverTest);
 
-router.get('/qgis2web', (req, res) => {
+router.get('/wotjr', (req, res) => {
     res.sendFile(path.join(__dirname, '/qgis2web/index.html'));
 })
 
