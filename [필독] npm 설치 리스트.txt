@@ -2,7 +2,7 @@ npm 설치 리스트 	*추가 될 수 있음
 
 
 express  		npm i express --save
-morgan  		npm i margan --save
+morgan  		npm i morgan --save
 socket.io 		npm i socket.io --save
 mysql    		npm i mysql --save
 mybatis-mapper  	npm i mybatis-mapper --save
