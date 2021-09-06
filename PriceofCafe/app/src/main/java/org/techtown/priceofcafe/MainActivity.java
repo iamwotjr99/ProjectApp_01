@@ -1012,9 +1012,6 @@ public class MainActivity extends AppCompatActivity {
     public void onButton304Clicked(View v) {
         Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/_freci"));
         startActivity(myIntent); }
-    public void onButton306Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/_freci"));
-        startActivity(myIntent); }
 
 
 }
