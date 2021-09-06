@@ -1267,6 +1267,15 @@
                 android:textSize="17sp"
                 app:backgroundTint="#FFFFFF" />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton306Clicked"
+                android:text="쁘레씨"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
 
         </LinearLayout>
     </ScrollView>
