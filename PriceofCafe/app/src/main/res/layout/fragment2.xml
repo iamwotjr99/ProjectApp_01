@@ -226,6 +226,168 @@
                 android:textColor="#000000"
                 android:textSize="17sp"
                 app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton318Clicked"
+                android:text="셈커피"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton326Clicked"
+                android:text="19티 경주안강점"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton327Clicked"
+                android:text="배스킨라빈스 경주안강점"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton341Clicked"
+                android:text="카페용담로548"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton377Clicked"
+                android:text="디저트39"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton380Clicked"
+                android:text="텐퍼센트커피 경주용황점"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton382Clicked"
+                android:text="텐퍼센트커피 경주황성점"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton406Clicked"
+                android:text="배스킨라빈스 경주황성점"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton412Clicked"
+                android:text="컴포즈커피 경주석장점"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton413Clicked"
+                android:text="커피공방 원다방"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton415Clicked"
+                android:text="컴포즈커피 경주황성점"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton417Clicked"
+                android:text="배스킨라빈스 경주동대점"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton420Clicked"
+                android:text="크라상점 경주황성점"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton425Clicked"
+                android:text="19티 경주황성점"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton427Clicked"
+                android:text="브알라 Lite 경주 황성"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton441Clicked"
+                android:text="만랩커피 경주용황점"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton445Clicked"
+                android:text="아모르파티"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton447Clicked"
+                android:text="비터스윗"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
 
 
         </LinearLayout>

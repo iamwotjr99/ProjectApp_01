@@ -60,11 +60,12 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment1).commit();
 
         TabLayout tabs = findViewById(R.id.tabs);
-        tabs.addTab(tabs.newTab().setText("1000원대"));
-        tabs.addTab(tabs.newTab().setText("2000원대"));
-        tabs.addTab(tabs.newTab().setText("3000원대"));
-        tabs.addTab(tabs.newTab().setText("4000원대"));
-        tabs.addTab(tabs.newTab().setText("5000원대 이상"));
+        tabs.addTab(tabs.newTab().setText("1000"));
+        tabs.addTab(tabs.newTab().setText("2000"));
+        tabs.addTab(tabs.newTab().setText("3000"));
+        tabs.addTab(tabs.newTab().setText("4000"));
+        tabs.addTab(tabs.newTab().setText("5.0-X.0"));
+        //dfdfdf
 
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
@@ -1019,7 +1020,998 @@ public class MainActivity extends AppCompatActivity {
         Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/_freci"));
         startActivity(myIntent); }
     public void onButton307Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EC%95%88%EA%B0%95%EC%9D%8D%20%EC%B9%B4%ED%8E%98/place/21581787?c=14378038.6444827,4301984.0263353,16,0,0,0,dh"));
+        startActivity(myIntent); }
+    public void onButton308Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/sulbing_angang"));
+        startActivity(myIntent); }
+    public void onButton309Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/nleefamily/221579131173"));
+        startActivity(myIntent); }
+    public void onButton310Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/lwj3836/222314658748"));
+        startActivity(myIntent); }
+    public void onButton311Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/quineka/222010001975"));
+        startActivity(myIntent); }
+    public void onButton312Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/mkkim8795/222136890171"));
+        startActivity(myIntent); }
+    public void onButton313Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/zhangxm5761/222218616735"));
+        startActivity(myIntent); }
+    public void onButton314Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EC%95%88%EA%B0%95%EC%9D%8D%20%EC%B9%B4%ED%8E%98/place/31847591?c=14381958.8828025,4301060.6227319,18,0,0,0,dh"));
+        startActivity(myIntent); }
+    public void onButton315Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EC%95%88%EA%B0%95%EC%9D%8D%EC%B9%B4%ED%8E%98/place/97844699?c=14382029.9714293,4301056.5221326,19,0,0,0,dh"));
+        startActivity(myIntent); }
+    public void onButton316Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/gkflafosem1/221072485796"));
+        startActivity(myIntent); }
+    public void onButton317Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.yogerpresso.co.kr/menu/menu_list.html?catcode=101000&prdcode=2105030002"));
+        startActivity(myIntent); }
+    public void onButton318Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.yogerpresso.co.kr/menu/menu_list.html?catcode=101000&prdcode=2105030002"));
+        startActivity(myIntent); }
+    public void onButton319Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/cafe_n.o.n/?igshid=17jynnkg2w4hy"));
+        startActivity(myIntent); }
+    public void onButton320Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/donapple/221272612699"));
+        startActivity(myIntent); }
+    public void onButton321Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.coffeeplace.kr"));
+        startActivity(myIntent); }
+    public void onButton322Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EC%95%88%EA%B0%95%EC%9D%8D%EC%B9%B4%ED%8E%98/place/1054416278?c=14383366.5177636,4299490.2203178,15,0,0,0,dh"));
+        startActivity(myIntent); }
+    public void onButton323Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ediya.com/"));
+        startActivity(myIntent); }
+    public void onButton324Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EC%95%88%EA%B0%95%EC%9D%8D%EC%B9%B4%ED%8E%98/place/1110425464?c=14384752.8350421,4299412.6644285,19,0,0,0,dh"));
+        startActivity(myIntent); }
+    public void onButton325Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/setyna/220804854339"));
+        startActivity(myIntent); }
+    public void onButton326Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.19tea.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton327Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.baskinrobbins.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton328Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.cafebombom.co.kr/bbs/board.php?bo_table=menu&sca=NEW"));
+        startActivity(myIntent); }
+    public void onButton329Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.paris.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton330Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.tlj.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton331Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.coffeebay.com/home/menu/menu_new"));
+        startActivity(myIntent); }
+    public void onButton332Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/k1009eun/222427920801"));
+        startActivity(myIntent); }
+    public void onButton333Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/psy3764/222185928224"));
+        startActivity(myIntent); }
+    public void onButton334Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EC%95%88%EA%B0%95%EC%9D%8D%EC%B9%B4%ED%8E%98/place/1845824473?c=14385549.6710892,4299663.4401027,19,0,0,0,dh"));
+        startActivity(myIntent); }
+    public void onButton335Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/d.r_ag"));
+        startActivity(myIntent); }
+    public void onButton336Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/hoy9932/222367911083"));
+        startActivity(myIntent); }
+    public void onButton337Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/vldksh8973/221504236083"));
+        startActivity(myIntent); }
+    public void onButton338Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/cafe_de_sofa"));
+        startActivity(myIntent); }
+    public void onButton339Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/official_undernine/"));
+        startActivity(myIntent); }
+    public void onButton340Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ediya.com/"));
+        startActivity(myIntent); }
+    public void onButton341Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1613671497?c=14379635.1440919,4285671.3566290,19,0,0,0,dh"));
+        startActivity(myIntent); }
+    public void onButton342Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://theventi.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton343Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.paris.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton344Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.myungga.com/"));
+        startActivity(myIntent); }
+    public void onButton345Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/sosoje314/222434142097"));
+        startActivity(myIntent); }
+    public void onButton346Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://starblanc.modoo.at/"));
+        startActivity(myIntent); }
+    public void onButton347Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/u.space6147"));
+        startActivity(myIntent); }
+    public void onButton348Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/cafe_floor_master"));
+        startActivity(myIntent); }
+    public void onButton349Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1802332380?c=14382010.4014628,4282426.3574418,15,0,0,0,dh"));
+        startActivity(myIntent); }
+    public void onButton350Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.paris.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton351Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/earlybird_kyeongju"));
+        startActivity(myIntent); }
+    public void onButton352Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/agong05/222117658462"));
+        startActivity(myIntent); }
+    public void onButton353Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/onmyway86/221682828015"));
+        startActivity(myIntent); }
+    public void onButton354Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://cafebombom.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton355Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/kye_stellar"));
+        startActivity(myIntent); }
+    public void onButton356Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://flowercafemihwa.modoo.at/"));
+        startActivity(myIntent); }
+    public void onButton357Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.tlj.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton358Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ediya.com/"));
+        startActivity(myIntent); }
+    public void onButton359Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1706111965?c=14382613.3968805,4282329.2659643,19,0,0,0,dh"));
+        startActivity(myIntent); }
+    public void onButton360Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/wiseegg88/222080550806"));
+        startActivity(myIntent); }
+    public void onButton361Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/19862639?c=14382706.0926205,4281982.0212881,19,0,0,0,dh"));
+        startActivity(myIntent); }
+    public void onButton362Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/hwa_u00/222303398160"));
+        startActivity(myIntent); }
+    public void onButton363Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/zaerac/222002286620"));
+        startActivity(myIntent); }
+    public void onButton364Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/sweet_table._"));
+        startActivity(myIntent); }
+    public void onButton365Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/cafe._.dongcheon"));
+        startActivity(myIntent); }
+    public void onButton366Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/ohmycustard.kr/"));
+        startActivity(myIntent); }
+    public void onButton367Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/usm96/221830682443"));
+        startActivity(myIntent); }
+    public void onButton368Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/cafe_floor_master"));
+        startActivity(myIntent); }
+    public void onButton369Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://blog.naver.com/lyw7340"));
+        startActivity(myIntent); }
+    public void onButton370Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/ma_reve__"));
+        startActivity(myIntent); }
+    public void onButton371Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/scene__coffee"));
+        startActivity(myIntent); }
+    public void onButton372Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://instagram.com/pittorecoffee?igshid=n22xv9l6nmmb"));
+        startActivity(myIntent); }
+    public void onButton373Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/harudoughnut"));
+        startActivity(myIntent); }
+    public void onButton374Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/mosso_bakery_official"));
+        startActivity(myIntent); }
+    public void onButton375Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/seongdonggaga"));
+        startActivity(myIntent); }
+    public void onButton376Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/bonbonbon_cakecafe"));
+        startActivity(myIntent); }
+    public void onButton377Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dessert39.com/menu/menu.php?Txt_bcode=030510001&Txt_nbyn="));
+        startActivity(myIntent); }
+    public void onButton378Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/shep99/222307945651"));
+        startActivity(myIntent); }
+    public void onButton379Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/suninjangclub"));
+        startActivity(myIntent); }
+    public void onButton380Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://instagram.com/tenpercent.coffee.yong.hwang"));
+        startActivity(myIntent); }
+    public void onButton381Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/1013_yoo/222373959316"));
+        startActivity(myIntent); }
+    public void onButton382Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://tenpercentcoffee.com/"));
+        startActivity(myIntent); }
+    public void onButton383Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/oscardegrey"));
+        startActivity(myIntent); }
+    public void onButton384Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.gong-cha.co.kr/brand/menu/order.php"));
+        startActivity(myIntent); }
+    public void onButton385Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/_midnight_cafe"));
+        startActivity(myIntent); }
+    public void onButton386Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/welcome_bok2ne"));
+        startActivity(myIntent); }
+    public void onButton387Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/ksyactto/221397030833"));
+        startActivity(myIntent); }
+    public void onButton388Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/shoutbanana/222222733184"));
+        startActivity(myIntent); }
+    public void onButton389Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/https://instagram.com/givememoore"));
+        startActivity(myIntent); }
+    public void onButton390Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://haimstar.com/"));
+        startActivity(myIntent); }
+    public void onButton391Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/_hippie_shop"));
+        startActivity(myIntent); }
+    public void onButton392Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.megacoffee.me/bbs/content.php?co_id=menu1"));
+        startActivity(myIntent); }
+    public void onButton393Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.hollys.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton394Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/delight1290/222226346056"));
+        startActivity(myIntent); }
+    public void onButton395Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://newtrocafe.com/"));
+        startActivity(myIntent); }
+    public void onButton396Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.paris.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton397Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/kangyj4943/222219673024"));
+        startActivity(myIntent); }
+    public void onButton398Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dutchandbean.com/"));
+        startActivity(myIntent); }
+    public void onButton399Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.rollingpin.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton400Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://churros1500_gyeongju@instagram.com/"));
+        startActivity(myIntent); }
+    public void onButton401Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/kko_eun/222358785192"));
+        startActivity(myIntent); }
+    public void onButton402Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/quineka/222010001975"));
+        startActivity(myIntent); }
+    public void onButton403Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/heeya_BPM"));
+        startActivity(myIntent); }
+    public void onButton404Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ediya.com/"));
+        startActivity(myIntent); }
+    public void onButton405Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/cafe.t.kenya"));
+        startActivity(myIntent); }
+    public void onButton406Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.baskinrobbins.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton407Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/cafe_yan/"));
+        startActivity(myIntent); }
+    public void onButton408Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.tlj.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton409Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/fmb977l"));
+        startActivity(myIntent); }
+    public void onButton410Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://0547775150.bdp.kr/"));
+        startActivity(myIntent); }
+    public void onButton411Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ediya.com/"));
+        startActivity(myIntent); }
+    public void onButton412Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://composecoffee.com/board_koTk88"));
+        startActivity(myIntent); }
+    public void onButton413Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/drinkingmc/220551318344"));
+        startActivity(myIntent); }
+    public void onButton414Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1076061485?c=14384549.7326312,4282348.6759485,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton415Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://composecoffee.com/board_koTk88"));
+        startActivity(myIntent); }
+    public void onButton416Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://blog.naver.com/hhwwii1008"));
+        startActivity(myIntent); }
+    public void onButton417Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.baskinrobbins.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton418Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/jhappy6129/222049866856"));
+        startActivity(myIntent); }
+    public void onButton419Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/yhyhjong/222063028651"));
+        startActivity(myIntent); }
+    public void onButton420Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.crashop.co.kr/17"));
+        startActivity(myIntent); }
+    public void onButton421Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/smmh444/222292694430"));
+        startActivity(myIntent); }
+    public void onButton422Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/mizzakong"));
+        startActivity(myIntent); }
+    public void onButton423Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/brillant__1"));
+        startActivity(myIntent); }
+    public void onButton424Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ediya.com/"));
+        startActivity(myIntent); }
+    public void onButton425Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/"));
+        startActivity(myIntent); }
+    public void onButton426Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/speed5658/222197593794"));
+        startActivity(myIntent); }
+    public void onButton427Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://voilakorea.com/"));
+        startActivity(myIntent); }
+    public void onButton428Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.coffeeplace.kr"));
+        startActivity(myIntent); }
+    public void onButton429Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ediya.com/"));
+        startActivity(myIntent); }
+    public void onButton430Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/amasvin_korea/"));
+        startActivity(myIntent); }
+    public void onButton431Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ediya.com/"));
+        startActivity(myIntent); }
+    public void onButton432Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/coffice.togo"));
+        startActivity(myIntent); }
+    public void onButton433Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://theventi.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton434Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.tlj.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton435Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.smoothieking.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton436Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ediya.com/"));
+        startActivity(myIntent); }
+    public void onButton437Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.no1juicy.com/products/best"));
+        startActivity(myIntent); }
+    public void onButton438Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/nias0823/220073595589"));
+        startActivity(myIntent); }
+    public void onButton439Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/soso_cafe_"));
+        startActivity(myIntent); }
+    public void onButton440Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/mi2502/222087033900"));
+        startActivity(myIntent); }
+    public void onButton441Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.10000lab.com/"));
+        startActivity(myIntent); }
+    public void onButton442Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/skyyks111/222057941620"));
+        startActivity(myIntent); }
+    public void onButton443Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/chacha_sz/221743613409"));
+        startActivity(myIntent); }
+    public void onButton444Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/fmb977l"));
+        startActivity(myIntent); }
+    public void onButton445Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/success8142/222269725571"));
+        startActivity(myIntent); }
+    public void onButton446Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1604648183?c=14384559.2393157,4282762.5852719,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton447Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1080017245?c=14383151.4262434,4280109.0086398,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton448Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/jec1228/221717178561"));
+        startActivity(myIntent); }
+    public void onButton449Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ediya.com/"));
+        startActivity(myIntent); }
+    public void onButton450Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/berries_official"));
+        startActivity(myIntent); }
+    public void onButton451Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://blog.naver.com/saragarden"));
+        startActivity(myIntent); }
+    public void onButton452Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.coffeebay.com/home/menu/menu_new"));
+        startActivity(myIntent); }
+    public void onButton453Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.yogerpresso.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton454Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/specialdark/222206142433"));
+        startActivity(myIntent); }
+    public void onButton455Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://blog.naver.com/kjiwin2011"));
+        startActivity(myIntent); }
+    public void onButton456Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/Tsl-%ED%8B%B0%EC%97%90%EC%8A%A4%EC%97%98-1735547020057049/?pnref=story"));
+        startActivity(myIntent); }
+    public void onButton457Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/15742618?c=14383494.6798933,4280675.3547174,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton458Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.caffebene.co.kr/menu/index.html"));
+        startActivity(myIntent); }
+    public void onButton459Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/rlagudrl1326/221034882674"));
+        startActivity(myIntent); }
+    public void onButton460Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1188436270?c=14384378.6791016,4282855.9715235,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton461Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://avendutch.com/"));
+        startActivity(myIntent); }
+    public void onButton462Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/qkehel/220464575216"));
+        startActivity(myIntent); }
+    public void onButton463Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/dlawltn22/222090554992"));
+        startActivity(myIntent); }
+    public void onButton464Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/sweet2497249/221377707701"));
+        startActivity(myIntent); }
+    public void onButton465Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/camellia_62/220368730812"));
+        startActivity(myIntent); }
+    public void onButton466Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/mini710/221263723126"));
+        startActivity(myIntent); }
+    public void onButton467Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1226031159?c=14382905.5994119,4280156.6516642,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton468Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.caffe-pascucci.co.kr/product/productList.asp?typeCode=00100010"));
+        startActivity(myIntent); }
+    public void onButton469Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.paris.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton470Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1678588107?c=14384308.5589544,4281678.1929989,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton471Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.cafebombom.co.kr/bbs/board.php?bo_table=menu&sca=NEW"));
+        startActivity(myIntent); }
+    public void onButton472Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/setyna/221420102857"));
+        startActivity(myIntent); }
+    public void onButton473Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.paris.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton474Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/wiseegg88/222072337145"));
+        startActivity(myIntent); }
+    public void onButton475Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/708773005?c=14384120.4178830,4280346.9786304,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton476Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.masigray.com:5021/Menu/List.asp"));
+        startActivity(myIntent); }
+    public void onButton477Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/dlselvldzmrhdwn/222387924861"));
+        startActivity(myIntent); }
+    public void onButton478Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1578647333?c=14384386.5827855,4280163.0379604,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton479Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1513795200?c=14387496.7157749,4289524.7474552,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton480Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1544177358?c=14384961.2473928,4284715.9645026,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton481Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1490737502?c=14381295.6858041,4281613.5383781,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton482Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1306816097?c=14387365.9599010,4289237.4641256,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton483Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/setyna/221002869715"));
+        startActivity(myIntent); }
+    public void onButton484Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1401525912?c=14385189.8976269,4284151.4415470,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton485Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/cxz5076/222015976019"));
+        startActivity(myIntent); }
+    public void onButton486Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://composecoffee.com/board_koTk88"));
+        startActivity(myIntent); }
+    public void onButton487Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1233170641?c=14383099.2619301,4281724.7165422,19,0,0,0,dh&placePath=%2Fphoto%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton488Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1343643192?c=14382768.7654938,4280428.6562610,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton489Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1861652253?c=14384509.9359132,4280848.3848394,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton490Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.breadnco.kr/product/beverage/"));
+        startActivity(myIntent); }
+    public void onButton491Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1657253917?c=14383678.3459212,4282382.4546234,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton492Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/bobbob1937/222436187914"));
+        startActivity(myIntent); }
+    public void onButton493Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%ED%98%84%EA%B3%A1%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1454616797?c=14371611.7695291,4279959.1452879,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton494Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/hhddu/222007900886"));
+        startActivity(myIntent); }
+    public void onButton495Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/songhyun4479/222246481076"));
+        startActivity(myIntent); }
+    public void onButton496Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/gc_dabang"));
+        startActivity(myIntent); }
+    public void onButton497Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/wndud9631/222142156865"));
+        startActivity(myIntent); }
+    public void onButton498Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/pj7796/222104955201"));
+        startActivity(myIntent); }
+    public void onButton499Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/guuvelyy/222023412365"));
+        startActivity(myIntent); }
+    public void onButton500Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/ghnaa0822/222271000444"));
+        startActivity(myIntent); }
+    public void onButton501Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/oyso_cafe/"));
+        startActivity(myIntent); }
+    public void onButton502Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ediya.com/"));
+        startActivity(myIntent); }
+    public void onButton503clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EA%B2%BD%EC%A3%BC%EC%84%9C%EB%A9%B4%EC%B9%B4%ED%8E%98/place/173363069?c=14371672.2160126,4279824.5556922,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton504Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.paris.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton505Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://tomntoms.com/"));
+        startActivity(myIntent); }
+    public void onButton506Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dunkindonuts.co.kr/menu/main.php?top=D"));
+        startActivity(myIntent); }
+    public void onButton507Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/krsc22/222341248762"));
+        startActivity(myIntent); }
+    public void onButton508Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dunkindonuts.co.kr/menu/main.php?top=D"));
+        startActivity(myIntent); }
+    public void onButton509Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.cafedroptop.com/"));
+        startActivity(myIntent); }
+    public void onButton510Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/cafe___forest"));
+        startActivity(myIntent); }
+    public void onButton511Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EC%82%B0%EB%82%B4%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1829351834?c=14365071.2819031,4267195.4600877,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton512Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/the_coffee_road/"));
+        startActivity(myIntent); }
+    public void onButton513Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/yoon5172/222275087345"));
+        startActivity(myIntent); }
+    public void onButton514Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/1_992_j/222429806990"));
+        startActivity(myIntent); }
+    public void onButton515Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/nleefamily/222360569098"));
+        startActivity(myIntent); }
+    public void onButton516Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dunkindonuts.co.kr/menu/main.php?top=D"));
+        startActivity(myIntent); }
+    public void onButton517Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/cafe_notary"));
+        startActivity(myIntent); }
+    public void onButton518Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/dalin66/222141804834"));
+        startActivity(myIntent); }
+    public void onButton519Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.tomntoms.com/menu/menu.html"));
+        startActivity(myIntent); }
+    public void onButton520Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.cafedroptop.com/"));
+        startActivity(myIntent); }
+    public void onButton521Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/neul_in116"));
+        startActivity(myIntent); }
+    public void onButton522Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/cafe_vana"));
+        startActivity(myIntent); }
+    public void onButton523Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/bonny21/222308983385"));
+        startActivity(myIntent); }
+    public void onButton524Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/laon_coffee_roasters"));
+        startActivity(myIntent); }
+    public void onButton525Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/woon5400/222166462282"));
+        startActivity(myIntent); }
+    public void onButton526Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/fairy646/222395080286"));
+        startActivity(myIntent); }
+    public void onButton527Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/csh_0613/222406414282"));
+        startActivity(myIntent); }
+    public void onButton528Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.cafedroptop.com/"));
+        startActivity(myIntent); }
+    public void onButton529Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/gami1023/221535772195"));
+        startActivity(myIntent); }
+    public void onButton530Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/studio0330_cafe"));
+        startActivity(myIntent); }
+    public void onButton531Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://khssl.modoo.at/"));
+        startActivity(myIntent); }
+    public void onButton532Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/jowayo777/221067652667"));
+        startActivity(myIntent); }
+    public void onButton533Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EB%82%B4%EB%82%A8%EB%A9%B4%EC%B9%B4%ED%8E%98/place/1373353729?c=14389683.9211300,4273745.7512564,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton534Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://hwarangro33.modoo.at/"));
+        startActivity(myIntent); }
+    public void onButton535Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/skycody123/221665881026"));
+        startActivity(myIntent); }
+    public void onButton536Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.makeus.net/44154"));
+        startActivity(myIntent); }
+    public void onButton537Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/boreumdal_10"));
+        startActivity(myIntent); }
+    public void onButton538Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EA%B2%BD%EC%A3%BC%EC%84%B1%EA%B1%B4%EB%8F%99%EC%B9%B4%ED%8E%98/place/1438310330?c=14383146.0383801,4279764.8973259,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton539Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EA%B2%BD%EC%A3%BC%EC%84%B1%EA%B1%B4%EB%8F%99%EC%B9%B4%ED%8E%98/place/36860158?c=14382841.0118434,4279125.1148515,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton540Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/babywoo12/222104046447"));
+        startActivity(myIntent); }
+    public void onButton541Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/rainthema/220765103540"));
+        startActivity(myIntent); }
+    public void onButton542Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/uhmamooshi"));
+        startActivity(myIntent); }
+    public void onButton543Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/yellow_doughnut"));
+        startActivity(myIntent); }
+    public void onButton544Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/olivee_gj"));
+        startActivity(myIntent); }
+    public void onButton545Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/cafe_neung/"));
+        startActivity(myIntent); }
+    public void onButton546Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/gabong___"));
+        startActivity(myIntent); }
+    public void onButton547Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/u_truth/222312244007"));
+        startActivity(myIntent); }
+    public void onButton548Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/star_ogi/222434370995"));
+        startActivity(myIntent); }
+    public void onButton549Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/kim385719/222402609889"));
+        startActivity(myIntent); }
+    public void onButton550Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/91427ib/222413406567"));
+        startActivity(myIntent); }
+    public void onButton551Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/zaerac/222417423016"));
+        startActivity(myIntent); }
+    public void onButton552Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/dusl1984/222438240109"));
+        startActivity(myIntent); }
+    public void onButton553Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://instagram.com/aden_hwangnam"));
+        startActivity(myIntent); }
+    public void onButton554Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/sulha83/222436962079"));
+        startActivity(myIntent); }
+    public void onButton555Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/__walkcoffee"));
+        startActivity(myIntent); }
+    public void onButton556Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/krug.roasters/?hl=ko"));
+        startActivity(myIntent); }
+    public void onButton557Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://coffeeplace.kr/"));
+        startActivity(myIntent); }
+    public void onButton558Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/wolsung.dessert"));
+        startActivity(myIntent); }
+    public void onButton559Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/qufl1024/222440245583"));
+        startActivity(myIntent); }
+    public void onButton560Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/ssuny.84"));
+        startActivity(myIntent); }
+    public void onButton561Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/3ducks_coffee"));
+        startActivity(myIntent); }
+    public void onButton562Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/giwa_croissant"));
+        startActivity(myIntent); }
+    public void onButton563Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/bang0374/222383124860"));
+        startActivity(myIntent); }
+    public void onButton564Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://instagram.com/roasterydg?igshid=lxaiudkmkb5r"));
+        startActivity(myIntent); }
+    public void onButton565Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/nokeum_bakery/"));
+        startActivity(myIntent); }
+    public void onButton566Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.baskinrobbins.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton567Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/pain_atellier"));
+        startActivity(myIntent); }
+    public void onButton568Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.starbucks.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton569Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/artcafepalette/"));
+        startActivity(myIntent); }
+    public void onButton570Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://smartstore.naver.com/gjb"));
+        startActivity(myIntent); }
+    public void onButton571Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/misil_official"));
+        startActivity(myIntent); }
+    public void onButton572Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/alsace_bakery/"));
+        startActivity(myIntent); }
+    public void onButton573Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/viet.caphe_gyeongju/"));
+        startActivity(myIntent); }
+    public void onButton574Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/richoya18"));
+        startActivity(myIntent); }
+    public void onButton575Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/242cafe"));
+        startActivity(myIntent); }
+    public void onButton576Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ssbnc.kr/"));
+        startActivity(myIntent); }
+    public void onButton577Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/clockwork_thesaro"));
+        startActivity(myIntent); }
+    public void onButton578Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/cafe__ordinaire"));
+        startActivity(myIntent); }
+    public void onButton579Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/gaeul8965/222308078922"));
+        startActivity(myIntent); }
+    public void onButton580Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/ideal______"));
+        startActivity(myIntent); }
+    public void onButton581Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/yeolmaedal_"));
+        startActivity(myIntent); }
+    public void onButton582Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/_kurobo"));
+        startActivity(myIntent); }
+    public void onButton583Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.starbucks.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton584Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/myway0328/222389745365"));
+        startActivity(myIntent); }
+    public void onButton585Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://mojjigyeongyu.modoo.at/"));
+        startActivity(myIntent); }
+    public void onButton586Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/gyeongju_booboo"));
+        startActivity(myIntent); }
+    public void onButton587Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://blog.naver.com/sulbing0"));
+        startActivity(myIntent); }
+    public void onButton588Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/lej3632/222437633215"));
+        startActivity(myIntent); }
+    public void onButton589Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/lola__coffee"));
+        startActivity(myIntent); }
+    public void onButton590Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://caferoffi.modoo.at/"));
+        startActivity(myIntent); }
+    public void onButton591Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/le_turtle_"));
+        startActivity(myIntent); }
+    public void onButton592Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com/cafe737"));
+        startActivity(myIntent); }
+    public void onButton593Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/butterhills_"));
+        startActivity(myIntent); }
+    public void onButton594Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.starbucks.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton595Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/yeongguk_jegwa_"));
+        startActivity(myIntent); }
+    public void onButton596Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/jigeum.kr"));
+        startActivity(myIntent); }
+    public void onButton597Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/ma_reve__"));
+        startActivity(myIntent); }
+    public void onButton598Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/cafe_onjeon"));
+        startActivity(myIntent); }
+    public void onButton599Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/jyejye_caron"));
+        startActivity(myIntent); }
+    public void onButton600Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://instagram.com/aubelune_macaron"));
+        startActivity(myIntent); }
+    public void onButton601Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/jangmigrida"));
+        startActivity(myIntent); }
+    public void onButto602Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/jinx75/222174960203"));
+        startActivity(myIntent); }
+    public void onButton603Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/yeorihwa"));
+        startActivity(myIntent); }
+    public void onButton604Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/adela__bake"));
+        startActivity(myIntent); }
+    public void onButton605Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/pudding_dansi"));
+        startActivity(myIntent); }
+    public void onButton606Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.gong-cha.co.kr/brand/menu/order.php"));
+        startActivity(myIntent); }
+    public void onButton607Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.jaycoffee.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton608Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dalkomm.com/menu/"));
+        startActivity(myIntent); }
+    public void onButton609Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://kis9600.modoo.at/"));
+        startActivity(myIntent); }
+    public void onButton610Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://paikdabang.com/menu/menu_coffee/"));
+        startActivity(myIntent); }
+    public void onButton611Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://bit.ly/39HZgte"));
+        startActivity(myIntent); }
+    public void onButton612Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/tlsdmswjd127/222237486440"));
+        startActivity(myIntent); }
+    public void onButton613Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/chunghyo_coffee/"));
+        startActivity(myIntent); }
+    public void onButton614Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/lovyu0/222240520545"));
+        startActivity(myIntent); }
+    public void onButton615Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ediya.com/"));
+        startActivity(myIntent); }
+    public void onButton616Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/moonbb18/222150934046"));
+        startActivity(myIntent); }
+    public void onButton617Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/rkdms2009/222201027169"));
+        startActivity(myIntent); }
+    public void onButton618Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EA%B2%BD%EC%A3%BC%EC%84%A0%EB%8F%84%EB%8F%99%EC%B9%B4%ED%8E%98/place/1389967807?c=14379719.9806758,4279373.7475968,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton619Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.baskinrobbins.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton620Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/l79921/"));
+        startActivity(myIntent); }
+    public void onButton621Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/jinisana/222433071057"));
+        startActivity(myIntent); }
+    public void onButton622Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EA%B2%BD%EC%A3%BC%EC%84%A0%EB%8F%84%EB%8F%99%EC%B9%B4%ED%8E%98/place/1177509339?c=14379766.7125981,4279306.8819277,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton623Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.yogerpresso.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton624Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/kmingu9204/221199012333"));
+        startActivity(myIntent); }
+    public void onButton625Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://wednesday.7x7.kr/"));
+        startActivity(myIntent); }
+    public void onButton626Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.tlj.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton627Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.paris.co.kr/"));
+        startActivity(myIntent); }
+    public void onButton628Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/hoho123492/220078452059"));
+        startActivity(myIntent); }
+    public void onButton629Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EA%B2%BD%EC%A3%BC%EC%84%A0%EB%8F%84%EB%8F%99%EC%B9%B4%ED%8E%98/place/31992777?c=14381773.5803781,4278818.1803712,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton630Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EA%B2%BD%EC%A3%BC%EC%84%A0%EB%8F%84%EB%8F%99%EC%B9%B4%ED%8E%98/place/19907809?c=14378483.5328277,4278148.4228119,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton631Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://masigray.com/"));
+        startActivity(myIntent); }
+    public void onButton632Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EA%B2%BD%EC%A3%BC%EC%84%A0%EB%8F%84%EB%8F%99%EC%B9%B4%ED%8E%98/place/1333392472?c=14380860.7382897,4279018.6872144,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton633Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/fls9733/222327213852"));
+        startActivity(myIntent); }
+    public void onButton634Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/fls9733/221396640716"));
+        startActivity(myIntent); }
+    public void onButton635Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://map.naver.com/v5/search/%EA%B2%BD%EC%A3%BC%EC%84%A0%EB%8F%84%EB%8F%99%EC%B9%B4%ED%8E%98/place/1371106007?c=14381359.2492334,4278847.7597392,19,0,0,0,dh&placePath=%3Fentry%253Dpll"));
+        startActivity(myIntent); }
+    public void onButton636Clicked(View v) {
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/c.ommencement/"));
+        startActivity(myIntent); }
+    public void onButton637Clicked(View v) {
         Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/_freci"));
         startActivity(myIntent); }
+
 }
 
