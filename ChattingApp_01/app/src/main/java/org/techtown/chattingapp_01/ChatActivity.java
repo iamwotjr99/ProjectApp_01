@@ -100,6 +100,7 @@ public class ChatActivity extends AppCompatActivity {
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("Working Button", "Success");
                 attemptSend();
             }
         });
@@ -110,12 +111,14 @@ public class ChatActivity extends AppCompatActivity {
             return;
         }
         if (!mSocket.connected()) {
+            Log.d("Working attemptSend()", "fail");
             return;
         }
 
         mTyping = false;
 
         String message = mInputMessageView.getText().toString().trim();
+        Log.d("Working attemptSend()", "Success");
         if(TextUtils.isEmpty(message)) {
             mInputMessageView.requestFocus();
             return;
