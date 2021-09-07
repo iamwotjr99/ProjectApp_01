@@ -24,7 +24,7 @@ public class LoginActivity extends Activity {
         btn_sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, ChatActivity.class);
                 intent.putExtra("username", username_input.getText().toString());
                 startActivity(intent);
                 finish();
