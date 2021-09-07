@@ -5,7 +5,7 @@ var app = express();
 
 app.use(express.static('public'));
 
-var server = app.listen(80);
+var server = app.listen(5000);
 
 var io = socket(server);
 
