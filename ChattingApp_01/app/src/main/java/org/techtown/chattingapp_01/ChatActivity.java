@@ -26,7 +26,7 @@ import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
 
 public class ChatActivity extends AppCompatActivity {
-    private static final String TAG = "Chat_activity";
+    private static final String TAG = "ChatActivity";
 
     private Socket mSocket;
     private List<Message> mMessages = new ArrayList<Message>();
