@@ -60,11 +60,12 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment1).commit();
 
         TabLayout tabs = findViewById(R.id.tabs);
-        tabs.addTab(tabs.newTab().setText("1000원대"));
-        tabs.addTab(tabs.newTab().setText("2000원대"));
-        tabs.addTab(tabs.newTab().setText("3000원대"));
-        tabs.addTab(tabs.newTab().setText("4000원대"));
-        tabs.addTab(tabs.newTab().setText("5000원대 이상"));
+        tabs.addTab(tabs.newTab().setText("1000"));
+        tabs.addTab(tabs.newTab().setText("2000"));
+        tabs.addTab(tabs.newTab().setText("3000"));
+        tabs.addTab(tabs.newTab().setText("4000"));
+        tabs.addTab(tabs.newTab().setText("5.0-X.0"));
+        //dfdfdf
 
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
@@ -2011,80 +2012,6 @@ public class MainActivity extends AppCompatActivity {
     public void onButton637Clicked(View v) {
         Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/_freci"));
         startActivity(myIntent); }
-
-
-
-
-
-
-    public void onButton638Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton639Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton640Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton641Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton642Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton643Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton644Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton645Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton646Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton647Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton648Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton649Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton650Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton651Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton652Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton653Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton654Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton655Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton656Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton657Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton658Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-    public void onButton659Clicked(View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
-        startActivity(myIntent); }
-
-
 
 }
 
