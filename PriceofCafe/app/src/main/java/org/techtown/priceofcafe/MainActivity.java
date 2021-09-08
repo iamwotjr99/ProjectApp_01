@@ -65,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
         tabs.addTab(tabs.newTab().setText("3000"));
         tabs.addTab(tabs.newTab().setText("4000"));
         tabs.addTab(tabs.newTab().setText("5.0-X.0"));
-        //dfdfdf
 
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 

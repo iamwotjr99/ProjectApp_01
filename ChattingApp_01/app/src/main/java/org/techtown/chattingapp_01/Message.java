@@ -1,6 +1,8 @@
 package org.techtown.chattingapp_01;
 
 public class Message {
+    public static final int TYPE_SENDER = 1;
+    public static final int TYPE_RECEIVER = 2;
     public static final int TYPE_MESSAGE = 0;
     public static final int TYPE_LOG = 1;
     public static final int TYPE_ACTION = 2;

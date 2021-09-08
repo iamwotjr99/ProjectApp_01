@@ -215,6 +215,60 @@
                 android:textColor="#000000"
                 android:textSize="17sp"
                 app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton456Clicked"
+                android:text="카페 TSL"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton461Clicked"
+                android:text="어벤더치카페"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton465Clicked"
+                android:text="카카오츄로 경주황성점"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton471Clicked"
+                android:text="카페봄봄 경주동국대점"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton477Clicked"
+                android:text="오도르"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ui"
+                android:onClick="onButton614Clicked"
+                android:text="로보티머"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:backgroundTint="#FFFFFF" />
 
 
         </LinearLayout>
