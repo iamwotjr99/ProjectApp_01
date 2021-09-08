@@ -55,7 +55,7 @@ public class ChatActivity extends AppCompatActivity {
         //mSocket.on("stop typing", onStopTyping);
         mSocket.connect();
 
-        mAdapter = new ChatAdapter(this, mMessages);
+        mAdapter = new ChatAdapter(this, mMessages, mUsername);
         mMessagesView = findViewById(R.id.rv_message_list);
         mMessagesView.setLayoutManager(new LinearLayoutManager(this));
         mMessagesView.setAdapter(mAdapter);
