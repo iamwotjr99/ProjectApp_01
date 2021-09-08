@@ -1,6 +1,7 @@
 package org.techtown.chattingapp_01;
 
 import android.content.Context;
+import android.os.Build;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,13 +10,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class ChatAdapter extends RecyclerView.Adapter {
     private List<Message> mMessages;
     private String userName;
+    private DateTimeFormatter dateTime = DateTimeFormatter.ofPattern("HH:mm");
+    // private DateTimeFormatter dateTime2 = DateTimeFormatter.ofPattern("HH:mm");
     // private int[] mUsernameColors;
 
     public ChatAdapter(Context context, List<Message> messages, String userName) {
@@ -42,13 +49,16 @@ public class ChatAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         Message message = mMessages.get(position);
-
         if (holder.getClass() == SenderViewHolder.class) {
+            LocalDateTime now = LocalDateTime.now();
             ((SenderViewHolder)holder).senderMsg.setText(message.getMessage());
             ((SenderViewHolder)holder).senderName.setText(message.getUsername());
+            ((SenderViewHolder)holder).senderTime.setText(dateTime.format(now));
         } else {
+            LocalDateTime now = LocalDateTime.now();
             ((ReceiverViewHolder)holder).receiverMsg.setText(message.getMessage());
             ((ReceiverViewHolder)holder).receiverName.setText(message.getUsername());
+            ((ReceiverViewHolder)holder).receiverTime.setText(dateTime.format(now));
         }
     }
 
