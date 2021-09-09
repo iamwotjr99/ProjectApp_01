@@ -121,6 +121,7 @@ public class ChatActivity extends AppCompatActivity {
                                 attemptSend();
                             }
                         });
+                        break;
                 }
                 return false;
             }

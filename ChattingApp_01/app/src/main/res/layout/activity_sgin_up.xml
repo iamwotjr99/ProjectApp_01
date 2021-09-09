@@ -10,14 +10,15 @@
         android:id="@+id/username_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="300dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginTop="260dp"
+        android:hint="input your name"
         android:imeActionId="@+id/login"
         android:imeActionLabel="@string/action_sign_in"
-        android:hint="input your name"
-        tools:ignore="InvalidImeActionId">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="InvalidImeActionId"
+        tools:layout_editor_absoluteX="49dp"
+        android:singleLine="true"
+        android:imeOptions="actionDone">
 
     </EditText>
 
@@ -25,11 +26,10 @@
         android:id="@+id/sign_in_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="sign in"
         app:layout_constraintTop_toBottomOf="@+id/username_input"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:text="sign in">
+        tools:layout_editor_absoluteX="0dp">
 
     </Button>
 
