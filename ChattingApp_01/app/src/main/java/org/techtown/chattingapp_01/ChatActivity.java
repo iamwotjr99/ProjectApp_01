@@ -6,8 +6,10 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -102,6 +104,26 @@ public class ChatActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d("Working Button", "Success");
                 attemptSend();
+            }
+        });
+
+        //ENTER 키 누르면 메세지 보내짐
+        EditText enterMsg = (EditText) findViewById(R.id.et_message);
+        enterMsg.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int KeyCode, KeyEvent event) {
+                switch (KeyCode) {
+                    case KeyEvent.KEYCODE_ENTER:
+                        enterMsg.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Log.d("Working Button", "Success");
+                                attemptSend();
+                            }
+                        });
+                        break;
+                }
+                return false;
             }
         });
     }
