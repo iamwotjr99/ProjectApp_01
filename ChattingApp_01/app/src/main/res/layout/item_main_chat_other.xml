@@ -1,45 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/reciever_profile"
+        android:id="@+id/receiver_profile"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@drawable/friend" />
+        android:src="@drawable/friend"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/reciever_name"
+        android:id="@+id/receiver_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@id/reciever_profile"
         android:text="name"
-        android:textColor="#333333" />
+        android:textColor="#333333"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintStart_toEndOf="@id/receiver_profile"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
-        android:id="@+id/reciever_msg"
+    <ImageView
+        android:id="@+id/receiver_pic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/reciever_name"
+        android:layout_below="@+id/receiver_name"
         android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@id/reciever_profile"
+        android:padding="12dp"
+        android:maxWidth="250dp"
+        android:background="@drawable/chat_other_msgbox"
+        android:textColor="#333333"
+        android:src="@drawable/friend"
+        app:layout_constraintStart_toEndOf="@id/receiver_profile"
+        app:layout_constraintTop_toBottomOf="@id/receiver_name"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/receiver_pic_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13:35"
+        android:textSize="12sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toEndOf="@id/receiver_pic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/receiver_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
         android:background="@drawable/chat_other_msgbox"
         android:maxWidth="250dp"
         android:padding="12dp"
         android:text="Hello android"
-        android:textColor="#333333" />
-
+        android:textColor="#333333"
+        app:layout_constraintStart_toEndOf="@id/receiver_profile"
+        app:layout_constraintTop_toBottomOf="@id/receiver_name"
+        android:visibility="visible"/>
 
     <TextView
-        android:id="@+id/reciever_time"
+        android:id="@+id/receiver_msg_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/reciever_msg"
-        android:layout_marginLeft="8dp"
-        android:layout_toRightOf="@+id/reciever_msg"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="44dp"
         android:text="13:35"
-        android:textSize="12sp" />
-</RelativeLayout>
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/receiver_msg"
+        app:layout_constraintLeft_toRightOf="@id/receiver_msg"
+        android:visibility="visible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
