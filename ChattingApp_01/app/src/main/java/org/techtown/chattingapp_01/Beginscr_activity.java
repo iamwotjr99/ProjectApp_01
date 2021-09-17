@@ -24,20 +24,20 @@ public class Beginscr_activity extends AppCompatActivity {
                 .replace(R.id.container, frag_main_join).commit();
 
         TabLayout tab_beginscr = findViewById(R.id.tab_beginscr);
+        tab_beginscr.addTab(tab_beginscr.newTab().setText("로그인"));
         tab_beginscr.addTab(tab_beginscr.newTab().setText("회원가입"));
-        tab_beginscr.addTab(tab_beginscr.newTab().setText("로그인 하기"));
 
         tab_beginscr.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-               int position = tab.getPosition();
+                int position = tab.getPosition();
                 Log.d("Beginscr_activiry",
                         "선택된 탭:" + position);
                 Fragment selected = null;
                 if(position==0){
-                    selected = frag_main_join;
+                    selected = frag_main_login;
                 }else if(position == 1){
-                    selected= frag_main_login;
+                    selected= frag_main_join;
                 }
 
                 getSupportFragmentManager().beginTransaction().
