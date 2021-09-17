@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ChattingApp_01"
         android:name=".ChatApplication"
         android:usesCleartextTraffic="true">
-        <activity android:name=".LoginActivity"
+        <activity android:name=".Beginscr_activity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
