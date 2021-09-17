@@ -3,19 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/drawable/chat_my_msgbox.xml" value="0.15833333333333333" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/drawable/chat_other_msgbox.xml" value="0.15833333333333333" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/activity_chat_main.xml" value="0.10555555555555556" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/activity_sgin_up.xml" value="0.10555555555555556" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/drawer_grouplchat.xml" value="0.10555555555555556" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/drawer_personalchat.xml" value="0.1" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/frag_chatbot.xml" value="0.1" />
         <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/frag_chatlist.xml" value="0.36614583333333334" />
-        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/frag_main_login.xml" value="0.36614583333333334" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/frag_friendlist.xml" value="0.1" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/frag_main_join.xml" value="0.1" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/frag_main_login.xml" value="0.1" />
         <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/frag_setting.xml" value="0.36614583333333334" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/item_chat_action.xml" value="0.1" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/item_chat_log.xml" value="0.1" />
         <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/item_chat_message.xml" value="0.36614583333333334" />
-        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/item_chatlist.xml" value="0.36614583333333334" />
-        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/item_drawer_groupchat.xml" value="0.36614583333333334" />
-        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/item_friendlist.xml" value="0.36614583333333334" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/item_chatlist.xml" value="0.2956521739130435" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/item_drawer_groupchat.xml" value="0.1" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/item_drawer_personalchat.xml" value="0.1" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/item_friendlist.xml" value="0.2956521739130435" />
         <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/item_main_chat_me.xml" value="0.36614583333333334" />
         <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/item_main_chat_other.xml" value="0.36614583333333334" />
         <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/item_main_gallery_me.xml" value="0.36614583333333334" />
         <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/item_main_gallery_other.xml" value="0.36614583333333334" />
-        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/main_beginscr.xml" value="0.36614583333333334" />
-        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/main_groupchat.xml" value="0.36614583333333334" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/main_beginscr.xml" value="0.1" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/main_groupchat.xml" value="0.1" />
+        <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/main_personalchat.xml" value="0.1" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_chat_main.xml" value="0.24114583333333334" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_main.xml" value="0.24114583333333334" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_sgin_up.xml" value="0.264" />

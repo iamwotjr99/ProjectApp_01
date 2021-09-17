@@ -9,7 +9,6 @@ const connection = mysql.createConnection({  //커넥션 생성
     password : 'j1y35670'
 });
 
-
 mybatisMapper.createMapper(['C:/GitHub/ProjectApp_01/RaoTalk/Server/DB/chat_message.xml']);  //예) xml파일이 D드라이브에 있다면, D:/매퍼.xml
 
 //조회할 파라미터
@@ -20,7 +19,7 @@ var param = {
 //질의문 형식
 var format = {language: 'sql', indent: '  '};
 var query = mybatisMapper.getStatement('chat_message', 'selectviewmsg', param, format);
-//첫번째는 xml의 name값, 두번째는 해당 xml의 id값, 세번째는 파라미터, 마지막은 포맷이다.
+//첫번째는 xml의 namespace값, 두번째는 해당 xml의 id값, 세번째는 파라미터, 마지막은 포맷이다.
 
 console.log(query);  //해당쿼리가 조합된 것을 볼 수 있다.
 
