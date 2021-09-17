@@ -117,9 +117,9 @@ public class ChatAdapter extends RecyclerView.Adapter {
         public ReceiverViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            receiverMsg = (TextView) itemView.findViewById(R.id.reciever_msg);
-            receiverName = (TextView) itemView.findViewById(R.id.reciever_name);
-            receiverTime = itemView.findViewById(R.id.reciever_time);
+            receiverMsg = (TextView) itemView.findViewById(R.id.receiver_msg);
+            receiverName = (TextView) itemView.findViewById(R.id.receiver_name);
+            receiverTime = itemView.findViewById(R.id.receiver_msg_time);
         }
     }
 
@@ -135,7 +135,7 @@ public class ChatAdapter extends RecyclerView.Adapter {
 
             senderMsg = (TextView) itemView.findViewById(R.id.sender_msg);
             senderName = (TextView) itemView.findViewById(R.id.sender_name);
-            senderTime = itemView.findViewById(R.id.sender_time);
+            senderTime = itemView.findViewById(R.id.sender_msg_time);
         }
     }
 

@@ -1,5 +1,6 @@
 package org.techtown.chattingapp_01;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -35,7 +37,7 @@ public class ChatActivity extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView mMessagesView;
 
-    private TextInputEditText mInputMessageView;
+    private EditText mInputMessageView;
     private Handler mTypingHandler = new Handler();
 
     private boolean mTyping = false;
@@ -43,10 +45,11 @@ public class ChatActivity extends AppCompatActivity {
     private static final int TYPING_TIMER_LENGTH = 600;
     private String mUsername;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat_main);
+        setContentView(R.layout.main_personalchat);
 
         mUsername = getIntent().getExtras().getString("username");
 
@@ -58,11 +61,11 @@ public class ChatActivity extends AppCompatActivity {
         mSocket.connect();
 
         mAdapter = new ChatAdapter(this, mMessages, mUsername);
-        mMessagesView = findViewById(R.id.rv_message_list);
+        mMessagesView = findViewById(R.id.personal_recyclerView_chat);
         mMessagesView.setLayoutManager(new LinearLayoutManager(this));
         mMessagesView.setAdapter(mAdapter);
 
-        mInputMessageView = findViewById(R.id.et_message);
+        mInputMessageView = findViewById(R.id.editText_input);
         mInputMessageView.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -98,7 +101,7 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
-        Button sendButton = findViewById(R.id.btn_send);
+        Button sendButton = findViewById(R.id.button_send);
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,7 +111,7 @@ public class ChatActivity extends AppCompatActivity {
         });
 
         //ENTER 키 누르면 메세지 보내짐
-        EditText enterMsg = (EditText) findViewById(R.id.et_message);
+        EditText enterMsg = (EditText) findViewById(R.id.editText_input);
         enterMsg.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int KeyCode, KeyEvent event) {
