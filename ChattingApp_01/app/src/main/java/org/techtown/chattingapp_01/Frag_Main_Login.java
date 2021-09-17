@@ -55,7 +55,7 @@ public class Frag_Main_Login extends Fragment {
         Gson gson = new GsonBuilder().setLenient().create();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://ec2-15-164-230-128.ap-northeast-2.compute.amazonaws.com:3000")
+                .baseUrl(ServerURL.RETROFIT_SERVER_URL)
                 .addConverterFactory(new NullOnEmptyConverterFactory())
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
