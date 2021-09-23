@@ -84,12 +84,17 @@ public class Frag_Main_Login extends Fragment {
                             User result = response.body();
                             if(result != null) {
                                 Log.d("Login: ", "Success");
-                                Intent intent = new Intent(getActivity(), ChatActivity.class);
-                                intent.putExtra("username", result.getName());
+                                //Intent intent = new Intent(getActivity(), MainActivity.class);
+                                Intent intent = new Intent(getActivity(), MainActivity.class);
+                                intent.putExtra("userName", result.getName());
+                                intent.putExtra("userEmail", result.getEmail());
+                                intent.putExtra("userPassword", result.getPassword());
+                                intent.putExtra("userProfile", result.getProfile());
+                                intent.putExtra("userID", result.getUser_id());
                                 startActivity(intent);
                             } else {
                                 Log.d("Login: ", "Fail");
-
+                                Toast.makeText(getContext(), "다시 입력해주세요", Toast.LENGTH_LONG).show();
                             }
 
 

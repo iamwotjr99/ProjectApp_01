@@ -21,7 +21,7 @@ public class Beginscr_activity extends AppCompatActivity {
         frag_main_login = new Frag_Main_Login();
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container, frag_main_join).commit();
+                .replace(R.id.container, frag_main_login).commit();
 
         TabLayout tab_beginscr = findViewById(R.id.tab_beginscr);
         tab_beginscr.addTab(tab_beginscr.newTab().setText("로그인"));

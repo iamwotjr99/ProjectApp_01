@@ -1,11 +1,16 @@
 package org.techtown.chattingapp_01;
 
+import android.net.Uri;
+
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface RetrofitAPI {
@@ -15,5 +20,20 @@ public interface RetrofitAPI {
     @GET("/get/user/{email}/{password}")
     Call<User> getUser(@Path("email") String email, @Path("password") String password);
 
+    @GET("/get/user/{user_id}")
+    Call<User> getUserID(@Path("user_id") int user_id);
+
+    @FormUrlEncoded
+    @PUT("/put/user/profile")
+        //Call<User> postUserProfile(@Part MultipartBody.Part profile, @Part("email") RequestBody email);
+    Call<User> postUserProfile(@Field("profile") Uri profile,
+                               @Field("email") String email);
+
+    @POST("/post/user/{user_id}/add/{friend_id}")
+    Call<User> postAddFriends(@Path("user_id") int user_id, @Path("friend_id") int friendID,
+                              @Body User friend);
+
+    @GET("/get/{user_id}/friendsList/")
+    Call<List<Friends>> getFriends(@Path("user_id") int user_id);
 
 }

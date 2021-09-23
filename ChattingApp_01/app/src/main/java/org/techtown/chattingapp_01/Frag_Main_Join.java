@@ -1,5 +1,6 @@
 package org.techtown.chattingapp_01;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,7 +15,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -37,8 +40,15 @@ public class Frag_Main_Join extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.frag_main_join, container, false);
 
+        OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .connectTimeout(1, TimeUnit.MINUTES)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .writeTimeout(15, TimeUnit.SECONDS)
+                .build();
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(ServerURL.RETROFIT_SERVER_URL)
+                .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -65,9 +75,16 @@ public class Frag_Main_Join extends Fragment {
                     public void onResponse(Call<User> call, Response<User> response) {
                         if(response.isSuccessful()) {
                             User userResult = response.body();
-                            Log.d("PostCall", userResult.toString());
+                            // Log.d("PostCall", userResult.toString());
+                            Toast.makeText(getContext(), "회원가입 성공!", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(getActivity(), SetProfileActivity.class);
+                            intent.putExtra("userName", name);
+                            intent.putExtra("userEmail", email);
+                            intent.putExtra("userPassword", password);
+                            startActivity(intent);
                         } else {
                             Log.d("ResponsePostCall", "실패");
+                            Toast.makeText(getContext(), "네트워크 오류", Toast.LENGTH_LONG).show();
                         }
                     }
 

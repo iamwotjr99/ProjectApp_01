@@ -44,6 +44,7 @@ public class ChatActivity extends AppCompatActivity {
 
     private static final int TYPING_TIMER_LENGTH = 600;
     private String mUsername;
+    private int mUserID;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -52,6 +53,7 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.main_personalchat);
 
         mUsername = getIntent().getExtras().getString("username");
+        mUserID = getIntent().getExtras().getInt("userID");
 
         ChatApplication app = (ChatApplication) getApplication();
         mSocket = app.getSocket();
@@ -154,6 +156,7 @@ public class ChatActivity extends AppCompatActivity {
 
         try {
             JSONObject data = new JSONObject();
+            data.put("user_id", mUserID);
             data.put("username", mUsername);
             data.put("message", message);
 
