@@ -1,10 +1,6 @@
-package org.teachtown.myapplication03;
-
-import org.json.JSONArray;
+package org.techtown.chattingapp_01;
 
 import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
 
 public class Constructor {
 

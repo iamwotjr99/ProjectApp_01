@@ -1,38 +1,16 @@
-package org.teachtown.myapplication03;
-
-import static android.service.controls.ControlsProviderService.TAG;
+package org.techtown.chattingapp_01;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
-import org.w3c.dom.Text;
-
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
@@ -40,8 +18,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.GET;
-import retrofit2.http.Path;
 
 public class CalendarActivity extends AppCompatActivity {
     String intentData1;
@@ -83,7 +59,7 @@ public class CalendarActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        RetrofitService retrofitService = retrofit.create(RetrofitService.class);
+        RetrofitAPI retrofitService = retrofit.create(RetrofitAPI.class);
 
         Call<List<Constructor>> call = retrofitService.getCalendar(intentData1, intentData2);
         call.enqueue(new Callback<List<Constructor>>() {

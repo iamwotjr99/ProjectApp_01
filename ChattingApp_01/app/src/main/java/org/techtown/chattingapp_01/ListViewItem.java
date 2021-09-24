@@ -1,4 +1,4 @@
-package org.teachtown.myapplication03;
+package org.techtown.chattingapp_01;
 
 import android.graphics.drawable.Drawable;
 

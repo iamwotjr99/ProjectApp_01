@@ -1,25 +1,16 @@
-package org.teachtown.myapplication03;
+package org.techtown.chattingapp_01;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-
-import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -36,14 +27,14 @@ public class CostActivity extends AppCompatActivity implements Serializable {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.today_cost);
+        setContentView(R.layout.activity_cost_main);
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://172.23.12.39:5000")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        RetrofitService retrofitService = retrofit.create(RetrofitService.class);
+        RetrofitAPI retrofitService = retrofit.create(RetrofitAPI.class);
 
         today_cost = (EditText) findViewById(R.id.editText_cost_input);
         today_memo = (EditText) findViewById(R.id.editText_memo_input);

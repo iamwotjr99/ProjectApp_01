@@ -63,6 +63,31 @@ router.post('/post/user', (req, res) => {
     })
 })
 
+let costList = [];
+router.post('/post/calendar/:cost/:memo', (req, res) => {
+    let cost = req.params.cost;
+    let memo = req.params.memo;
+    console.log("Post: {cost}: ", cost, ", {memo}: ", memo);
+    let result = {
+        cost : cost,
+        memo : memo
+    }
+    res.send(result);
+    costList.push(result);
+})
+
+router.get('/get/calendar/:cost/:memo', (req, res) => {
+    let cost = req.params.cost;
+    let memo = req.params.memo;
+    console.log("Get: {cost}: ", cost, ", {memo}: ", memo);
+    let result = {
+        cost : cost,
+        memo : memo
+    }
+    res.send(costList);
+    console.log(costList);
+})
+
 function serverTest(req, res) {
     res.send('Hello World!!');
 }

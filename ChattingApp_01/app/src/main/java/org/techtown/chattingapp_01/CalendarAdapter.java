@@ -1,6 +1,5 @@
-package org.teachtown.myapplication03;
+package org.techtown.chattingapp_01;
 
-import android.content.Context;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
