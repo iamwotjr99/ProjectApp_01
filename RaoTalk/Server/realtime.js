@@ -54,9 +54,4 @@ io.on('connection', (socket) => {
         
         socket.broadcast.emit('new message', data);
     });
-
-    socket.on("image", function(info) {
-        var img = new Image();
-        img.src = 'data:image/jpeg;base64,' + info.imageData;
-    });
 })

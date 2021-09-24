@@ -76,6 +76,7 @@ router.post('/post/user', (req, res) => {
     })
 })
 
+
 // 프로필 사진 설정
 router.put('/put/user/profile', (req, res) => {
     let email = req.body.email;
@@ -196,5 +197,34 @@ router.get("/get/:user_id/friendsList", (req, res) => {
         })
     })
 })
+
+let costList = [];
+router.post('/post/calendar/:cost/:memo', (req, res) => {
+    let cost = req.params.cost;
+    let memo = req.params.memo;
+    console.log("Post: {cost}: ", cost, ", {memo}: ", memo);
+    let result = {
+        cost : cost,
+        memo : memo
+    }
+    res.send(result);
+    costList.push(result);
+})
+
+router.get('/get/calendar/:cost/:memo', (req, res) => {
+    let cost = req.params.cost;
+    let memo = req.params.memo;
+    console.log("Get: {cost}: ", cost, ", {memo}: ", memo);
+    let result = {
+        cost : cost,
+        memo : memo
+    }
+    res.send(costList);
+    console.log(costList);
+})
+
+function serverTest(req, res) {
+    res.send('Hello World!!');
+}
 
 module.exports = router;

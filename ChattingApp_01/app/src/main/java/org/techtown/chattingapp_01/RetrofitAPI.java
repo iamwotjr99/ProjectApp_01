@@ -36,4 +36,10 @@ public interface RetrofitAPI {
     @GET("/get/{user_id}/friendsList/")
     Call<List<Friends>> getFriends(@Path("user_id") int user_id);
 
+    @POST("/post/calendar/{cost}/{memo}")
+    Call<Constructor> postCalendar(@Path("cost") String cost, @Path("memo") String memo);
+
+    @GET("/get/calendar/{cost}/{memo}")
+    Call<List<Constructor>> getCalendar(@Path("cost") String cost, @Path("memo") String memo);
+
 }
