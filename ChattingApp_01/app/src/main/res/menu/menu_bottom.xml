@@ -3,31 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/tab_friendlist"
-        app:showAsAction="ifRoom"
-        android:enabled="true"
+        android:id="@+id/tab_friend_list"
         android:icon="@drawable/friend"
-        android:title="친구 목록"
+        android:title="친구"
         />
     <item
-        android:id="@+id/tab_chatlist"
-        app:showAsAction="ifRoom"
-        android:enabled="true"
+        android:id="@+id/tab_chat_list"
         android:icon="@drawable/chatting"
         android:title="채팅방"
         />
     <item
-        android:id="@+id/tab_chatbot"
-        app:showAsAction="ifRoom"
-        android:enabled="true"
-        android:icon="@drawable/chatbot"
-        android:title="챗봇"
+        android:id="@+id/tab_cafe"
+        android:icon="@drawable/cafe"
+        android:title="카페"
         />
     <item
-        android:id="@+id/tab_setting"
-        app:showAsAction="ifRoom"
-        android:enabled="true"
-        android:icon="@drawable/setting"
-        android:title="설정"
+        android:id="@+id/tab_expend"
+        android:icon="@drawable/money"
+        android:title="지출"
         />
 </menu>

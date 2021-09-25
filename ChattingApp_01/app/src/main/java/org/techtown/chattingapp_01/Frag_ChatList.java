@@ -3,6 +3,7 @@ package org.techtown.chattingapp_01;
 import static android.media.CamcorderProfile.get;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,7 +16,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.techtown.chattingapp_01.ListViewItem;
 import org.techtown.chattingapp_01.RetrofitAPI;
 import org.techtown.chattingapp_01.RoomNameActivity;
 
@@ -29,18 +29,30 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Frag_ChatList extends Fragment {
-    RecyclerView recyclerView;
-    ChatListAdapter mAdapter;
-    LinearLayoutManager mLayoutManager;
-    List<ListViewItem> mList = new ArrayList<ListViewItem>();
+    private RecyclerView recyclerView;
+    private ChatListAdapter mAdapter;
+    private LinearLayoutManager mLayoutManager;
+    private List<Room> mList = new ArrayList<Room>();
 
-    ImageButton imageButton;
-    ImageView imageView_room;
-    String roomName;
+    private ImageButton imageButton;
+    private ImageView imageView_room;
+    private String roomName;
+
+    private String mUserName;
+    private String mUserEmail;
+    private String mUserPassword;
+    private String mUserProfile;
+    private int mUserID;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.frag_chatlist, container, false);
+
+        mUserName = getArguments().getString("userName");
+        mUserEmail = getArguments().getString("userEmail");
+        mUserPassword = getArguments().getString("userPassword");
+        mUserProfile = getArguments().getString("userProfile");
+        mUserID = getArguments().getInt("userID");
 
         roomName = getArguments().getString("roomName");
         imageView_room = view.findViewById((R.id.textView_room));
@@ -51,33 +63,40 @@ public class Frag_ChatList extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), RoomNameActivity.class);
+                intent.putExtra("userID", mUserID);
                 startActivity(intent);
             }
         });
 
+        String roomProfileString = "android.resource://org.techtown.sockettest/drawable/" + "img_person";
+        Uri roomProfileUri = Uri.parse(roomProfileString);
+
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://172.23.12.39:5000")
+                .baseUrl("http://192.168.219.101:3000")
+                .addConverterFactory(new NullOnEmptyConverterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         RetrofitAPI retrofitService = retrofit.create(RetrofitAPI.class);
 
-        Call<List<ListViewItem>> call = retrofitService.getChatList(roomName);
-        call.enqueue(new Callback<List<ListViewItem>>() {
+        // Log.d("mUserID", String.valueOf(mUserID));
+        Call<List<Room>> call = retrofitService.getChatList(mUserID);
+        call.enqueue(new Callback<List<Room>>() {
             @Override
-            public void onResponse(Call<List<ListViewItem>> call, Response<List<ListViewItem>> response) {
+            public void onResponse(Call<List<Room>> call, Response<List<Room>> response) {
                 if(response.isSuccessful()) {
-                    List<ListViewItem> res = response.body();
-                    Log.d("Frag_ChatList", res.get(0).getTitle());
+                    List<Room> res = response.body();
                     for(int i=0; i<res.size(); i++) {
-                        mList.add(new ListViewItem(res.get(i).getTitle()));
+                        if(mList.size() != res.size()) {
+                            mList.add(new Room(roomProfileUri, res.get(i).getRoomName()));
+                            mAdapter.notifyDataSetChanged();
+                        }
                     }
-                    mAdapter.notifyDataSetChanged();
                 }
             }
 
             @Override
-            public void onFailure(Call<List<ListViewItem>> call, Throwable t) {
+            public void onFailure(Call<List<Room>> call, Throwable t) {
                 Log.d("Call<List<Constructor>>", t.getMessage());
             }
         });

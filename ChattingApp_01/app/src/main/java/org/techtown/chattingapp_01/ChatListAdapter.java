@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
-import org.techtown.chattingapp_01.ListViewItem;
 import org.techtown.chattingapp_01.R;
 import org.w3c.dom.Text;
 
@@ -21,17 +20,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHolder> {
-    private List<ListViewItem> mList = new ArrayList<ListViewItem>();
 
-    public ChatListAdapter(Context context, List<ListViewItem> mList) {
-        this.mList = mList;
+    private List<Room> mList;
+
+    public ChatListAdapter(Context context, List<Room> chatList) {
+        this.mList = chatList;
     }
 
     @NonNull
     @Override
-    public ChatListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.frag_chatlist, parent, false);
+                .inflate(R.layout.item_chat_list, parent, false);
 
         ViewHolder viewHolder = new ViewHolder(view);
 
@@ -39,10 +39,10 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ChatListAdapter.ViewHolder holder, int position) {
-        ListViewItem listViewItem = mList.get(position);
-        holder.tV_roomName.setText(listViewItem.getTitle());
-        holder.iV_roomIcon.setImageDrawable(listViewItem.getIcon());
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Room chatList = mList.get(position);
+        holder.tV_roomName.setText(chatList.getRoomName());
+        holder.iV_roomProfile.setImageURI(chatList.getRoomProfile());
     }
 
     @Override
@@ -52,13 +52,13 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tV_roomName;
-        ImageView iV_roomIcon;
+        ImageView iV_roomProfile;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            tV_roomName = itemView.findViewById(R.id.imageView_room);
-            iV_roomIcon = itemView.findViewById((R.id.textView_room));
+            tV_roomName = itemView.findViewById(R.id.textView_room);
+            iV_roomProfile = itemView.findViewById((R.id.imageView_room));
         }
     }
 }

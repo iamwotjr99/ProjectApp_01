@@ -10,6 +10,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Frag_ChatList frag_chatList;
     private Frag_FriendList frag_friendList;
     private BottomNavigationView bottomNavigationView;
     private String mUserName;
@@ -39,20 +40,31 @@ public class MainActivity extends AppCompatActivity {
         frag_friendList = new Frag_FriendList();
         frag_friendList.setArguments(bundle);
 
+        frag_chatList = new Frag_ChatList();
+        frag_chatList.setArguments(bundle);
+
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.lobby_container, frag_friendList)
                 .commit();
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.tab_friend_list);
         bottomNavigationView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
-                            case R.id.tab_friendlist:
+                            case R.id.tab_friend_list:
                                 getSupportFragmentManager().beginTransaction()
                                         .replace(R.id.lobby_container, frag_friendList)
                                         .commit();
+                                return true;
+
+                            case R.id.tab_chat_list:
+                                getSupportFragmentManager().beginTransaction()
+                                        .replace(R.id.lobby_container, frag_chatList)
+                                        .commit();
+                                return true;
                         }
                         return false;
                     }

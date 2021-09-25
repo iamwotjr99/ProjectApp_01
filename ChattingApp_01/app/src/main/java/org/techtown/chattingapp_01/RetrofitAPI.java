@@ -42,9 +42,9 @@ public interface RetrofitAPI {
     @GET("/get/calendar/{cost}/{memo}")
     Call<List<Constructor>> getCalendar(@Path("cost") String cost, @Path("memo") String memo);
 
-    @POST("/post/chatList/{title}")
-    Call<ListViewItem> postChatList(@Path("title") String title);
+    @POST("/post/{user_id}/chatList/{roomName}")
+    Call<Room> postChatList(@Path("user_id") int user_id, @Path("roomName") String roomName);
 
-    @GET("/get/chatList/{title}")
-    Call<List<ListViewItem>> getChatList(@Path("title") String title);
+    @GET("/get/{user_id}/chatList")
+    Call<List<Room>> getChatList(@Path("user_id") int user_id);
 }

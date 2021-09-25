@@ -21,13 +21,15 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RoomNameActivity extends Activity {
-    RecyclerView recyclerView;
-    ChatListAdapter mAdapter;
-    List<ListViewItem> mLsit = new ArrayList<ListViewItem>();
+    private RecyclerView recyclerView;
+    private ChatListAdapter mAdapter;
+    private List<Room> mLsit = new ArrayList<Room>();
 
-    ImageButton imageButton;
-    EditText editText_roomName;
-    String imageUri;
+    private ImageButton imageButton;
+    private EditText editText_roomName;
+    private String imageUri;
+
+    private int mUserID;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,11 +37,13 @@ public class RoomNameActivity extends Activity {
         setContentView(R.layout.activity_roomname_main);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://172.23.12.39:5000")
+                .baseUrl("http://192.168.219.101:3000")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         RetrofitAPI retrofitService = retrofit.create(RetrofitAPI.class);
+
+        mUserID = getIntent().getExtras().getInt("userID");
 
         editText_roomName = (EditText) findViewById(R.id.editText_roomName_input);
         imageButton = (ImageButton) findViewById(R.id.imageButton_roomName_add);
@@ -48,23 +52,20 @@ public class RoomNameActivity extends Activity {
             public void onClick(View v) {
                 String roomName = editText_roomName.getText().toString();
 
-                Call<ListViewItem> call = retrofitService.postChatList(roomName);
-                call.enqueue(new Callback<ListViewItem>() {
+                Call<Room> call = retrofitService.postChatList(mUserID, roomName);
+                call.enqueue(new Callback<Room>() {
                     @Override
-                    public void onResponse(Call<ListViewItem> call, Response<ListViewItem> response) {
+                    public void onResponse(Call<Room> call, Response<Room> response) {
                         if(response.isSuccessful()) {
-                            ListViewItem res = response.body();
-                            Log.d("onResponse", res.getTitle());
-                            Intent intent = new Intent(RoomNameActivity.this, RoomNameActivity.class);
-                            intent.putExtra("roomName", roomName);
-                            startActivity(intent);
+                            // Room res = response.body();
+                            finish();
                         } else {
                             Log.d("ResponsePostCall", "실패");
                         }
                     }
 
                     @Override
-                    public void onFailure(Call<ListViewItem> call, Throwable t) {
+                    public void onFailure(Call<Room> call, Throwable t) {
                         Log.d("FailurePostCall", t.getMessage());
                     }
                 });

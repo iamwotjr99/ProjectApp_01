@@ -35,6 +35,8 @@
         <activity android:name=".CostActivity"
             android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".SetProfileActivity"></activity>
+        <activity android:name=".AddFriendActivity"></activity>
     </application>
 
 </manifest>
