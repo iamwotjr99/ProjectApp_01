@@ -198,6 +198,7 @@ router.get("/get/:user_id/friendsList", (req, res) => {
     })
 })
 
+//캘린더 내용 설정
 let costList = [];
 router.post('/post/calendar/:cost/:memo', (req, res) => {
     let cost = req.params.cost;
@@ -221,6 +222,21 @@ router.get('/get/calendar/:cost/:memo', (req, res) => {
     }
     res.send(costList);
     console.log(costList);
+})
+
+//채팅방 목록
+router.post('/post/chatList/:title', (req, res) => {
+    let title = req.params.title;
+    console.log("Post: {title}", title);
+
+    res.send(title);
+})
+
+router.get('/get/chatList/:title', (req, res) => {
+    let title = req.params.title;
+    console.log("Get: {title}", title);
+
+    res.send(title);
 })
 
 function serverTest(req, res) {
