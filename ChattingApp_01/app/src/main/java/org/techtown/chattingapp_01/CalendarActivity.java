@@ -29,7 +29,6 @@ public class CalendarActivity extends AppCompatActivity {
     List<Constructor> mList = new ArrayList<Constructor>();
 
     Intent intent;
-    Bundle extra;
 
     LinearLayoutManager mLayoutManager;
 
@@ -39,7 +38,6 @@ public class CalendarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calendar_main);
 
         intent = getIntent();
-        extra = getIntent().getExtras();
         intentData1 = intent.getStringExtra("cost");
         intentData2 = intent.getStringExtra("memo");
 

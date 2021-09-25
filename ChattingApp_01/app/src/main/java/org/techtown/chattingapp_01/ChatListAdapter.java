@@ -9,58 +9,56 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.ViewHolder;
+
+import org.techtown.chattingapp_01.ListViewItem;
+import org.techtown.chattingapp_01.R;
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
+import java.util.List;
 
-public class ChatListAdapter extends BaseAdapter {
-    private ArrayList<ListViewItem> arrayChatList = new ArrayList<ListViewItem>();
+public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHolder> {
+    private List<ListViewItem> mList = new ArrayList<ListViewItem>();
 
-    public ChatListAdapter() {
+    public ChatListAdapter(Context context, List<ListViewItem> mList) {
+        this.mList = mList;
+    }
+
+    @NonNull
+    @Override
+    public ChatListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.frag_chatlist, parent, false);
+
+        ViewHolder viewHolder = new ViewHolder(view);
+
+        return viewHolder;
     }
 
     @Override
-    public int getCount() {
-        return arrayChatList.size();
+    public void onBindViewHolder(@NonNull ChatListAdapter.ViewHolder holder, int position) {
+        ListViewItem listViewItem = mList.get(position);
+        holder.tV_roomName.setText(listViewItem.getTitle());
+        holder.iV_roomIcon.setImageDrawable(listViewItem.getIcon());
     }
 
     @Override
-    public Object getItem(int position) {
-        return arrayChatList.get(position);
+    public int getItemCount() {
+        return mList.size();
     }
 
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView tV_roomName;
+        ImageView iV_roomIcon;
 
-    //화면에 보여질 각각의 화면에 보일 뷰 만듦
-    //각각의 아이템 데이터 뷰(레이아웃)를 만들어 객체를 만든 다음에 데이터를 넣고 리턴해줌
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        final int pos = position;
-        final Context context = parent.getContext();
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
 
-        if(convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.item_chat_list, parent, false);
+            tV_roomName = itemView.findViewById(R.id.imageView_room);
+            iV_roomIcon = itemView.findViewById((R.id.textView_room));
         }
-        ImageView imageViewIcon = (ImageView) convertView.findViewById(R.id.imageView_item);
-        TextView textViewTitle = (TextView) convertView.findViewById(R.id.textView_title);
-
-        ListViewItem listViewItem = arrayChatList.get(position);
-
-        // 아이템 내 각 위젯에 데이터 반영
-        imageViewIcon.setImageDrawable(listViewItem.getIcon());
-        textViewTitle.setText(listViewItem.getTitle());
-
-        return convertView;
-    }
-
-    public void addItem(Drawable icon, String title) {
-        ListViewItem item = new ListViewItem();
-
-        item.setIcon(icon);
-        item.setTitle(title);
-
-        arrayChatList.add(item);
     }
 }
