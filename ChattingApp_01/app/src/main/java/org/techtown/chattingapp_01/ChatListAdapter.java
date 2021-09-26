@@ -21,7 +21,17 @@ import java.util.List;
 
 public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHolder> {
 
+    public interface OnItemClickListener {
+        void onItemClick(View v, int position);
+    }
+
     private List<Room> mList;
+
+    private OnItemClickListener mListener = null;
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.mListener = listener;
+    }
 
     public ChatListAdapter(Context context, List<Room> chatList) {
         this.mList = chatList;
@@ -59,6 +69,18 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
 
             tV_roomName = itemView.findViewById(R.id.textView_room);
             iV_roomProfile = itemView.findViewById((R.id.imageView_room));
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if(position != RecyclerView.NO_POSITION) {
+                        if(mListener != null) {
+                            mListener.onItemClick(v, position);
+                        }
+                    }
+                }
+            });
         }
     }
 }

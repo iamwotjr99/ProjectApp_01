@@ -9,8 +9,14 @@ public class Room {
 
     @SerializedName("roomName")
     private String roomName;
-    @SerializedName("roomID")
+    @SerializedName("room_id")
     private int roomID;
+
+    public Room(Uri roomProfile, String roomName, int roomID) {
+        this.roomProfile = roomProfile;
+        this.roomName = roomName;
+        this.roomID = roomID;
+    }
 
     public Room(Uri roomProfile, String roomName) {
         this.roomProfile = roomProfile;
@@ -28,5 +34,12 @@ public class Room {
     }
     public String getRoomName() {
         return roomName;
+    }
+    public int getRoomID() {
+        return roomID;
+    }
+
+    public void setRoomID(int roomID) {
+        this.roomID = roomID;
     }
 }

@@ -43,6 +43,7 @@ public class Frag_ChatList extends Fragment {
     private String mUserPassword;
     private String mUserProfile;
     private int mUserID;
+    private int roomID;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -54,7 +55,7 @@ public class Frag_ChatList extends Fragment {
         mUserProfile = getArguments().getString("userProfile");
         mUserID = getArguments().getInt("userID");
 
-        roomName = getArguments().getString("roomName");
+        // roomName = getArguments().getString("roomName");
         imageView_room = view.findViewById((R.id.textView_room));
 
         imageView_room = view.findViewById(R.id.imageView_room);
@@ -106,6 +107,21 @@ public class Frag_ChatList extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new ChatListAdapter(getContext(), mList);
         recyclerView.setAdapter(mAdapter);
+
+        mAdapter.setOnItemClickListener(new ChatListAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                roomID = mList.get(position).getRoomID();
+                roomName = mList.get(position).getRoomName();
+                Log.d("setOnItemClickListener", String.valueOf(mList.get(position).getRoomID()));
+                Intent intent = new Intent(getContext(), MainActivity.class);
+                intent.putExtra("userName", mUserName);
+                intent.putExtra("userID", mUserID);
+                intent.putExtra("roomID", roomID);
+                intent.putExtra("roomName", roomName);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }
