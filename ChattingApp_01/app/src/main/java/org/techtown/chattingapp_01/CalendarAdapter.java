@@ -1,6 +1,6 @@
 package org.techtown.chattingapp_01;
 
-import android.text.TextWatcher;
+import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,11 +15,9 @@ import java.util.List;
 
 public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.ViewHolder> {
 
-    private CalendarActivity  context;
     private List<Constructor> mList = new ArrayList<Constructor>();
-    public TextWatcher textWatcher;
 
-    public CalendarAdapter(CalendarActivity context, List<Constructor> mList) {
+    public CalendarAdapter(Context context, List<Constructor> mList) {
         this.mList= mList;
     }
 

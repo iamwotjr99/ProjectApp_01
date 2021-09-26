@@ -2,6 +2,7 @@ package org.techtown.chattingapp_01;
 
 import android.net.Uri;
 
+import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
@@ -36,11 +37,11 @@ public interface RetrofitAPI {
     @GET("/get/{user_id}/friendsList/")
     Call<List<Friends>> getFriends(@Path("user_id") int user_id);
 
-    @POST("/post/calendar/{cost}/{memo}")
-    Call<Constructor> postCalendar(@Path("cost") String cost, @Path("memo") String memo);
+    @POST("/post/calendar/{cost}/{memo}/{date}")
+    Call<Constructor> postCalendar(@Path("cost") int cost, @Path("memo") String memo, String date);
 
     @GET("/get/calendar/{cost}/{memo}")
-    Call<List<Constructor>> getCalendar(@Path("cost") String cost, @Path("memo") String memo);
+    Call<List<Constructor>> getCalendar(@Path("cost") int cost, @Path("memo") String memo);
 
     @POST("/post/{user_id}/chatList/{roomName}")
     Call<Room> postChatList(@Path("user_id") int user_id, @Path("roomName") String roomName);

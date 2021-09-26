@@ -10,6 +10,9 @@ public class Constructor {
     @SerializedName("memo")
     private String memo;
 
+    @SerializedName("date")
+    private String date;
+
     public String getCost() { return cost; }
 
     public void setCost(String cost) { this.cost = cost; }
@@ -17,6 +20,10 @@ public class Constructor {
     public String getMemo() { return memo; }
 
     public void setMemo(String cost) { this.memo = memo; }
+
+    public String getDate() { return date; }
+
+    public void setDate(String date) { this.date = date; }
 
     public Constructor(String cost, String memo) {
         this.cost = cost;

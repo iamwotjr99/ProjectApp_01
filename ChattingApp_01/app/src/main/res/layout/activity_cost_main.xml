@@ -8,13 +8,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:text="지출 내용"
         android:textColor="@color/black"
-        android:textSize="30dp"></TextView>
+        android:textSize="20dp"></TextView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +21,7 @@
         android:orientation="horizontal"
         android:id="@+id/linear_cost"
         android:layout_below="@+id/textView_cost"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:layout_marginHorizontal="15dp"
         android:weightSum="10">
 
@@ -86,7 +85,7 @@
         android:layout_height="40dp"
         android:layout_below="@+id/linear_memo"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:layout_marginRight="20dp"
         android:background="#FFFFFF"
         android:src="@drawable/btn_plus"
@@ -98,7 +97,7 @@
         android:layout_height="40dp"
         android:layout_below="@+id/linear_memo"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:background="#FFFFFF"
         android:src="@drawable/btn_delete"
         android:scaleType="centerInside"></ImageButton>

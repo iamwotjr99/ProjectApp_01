@@ -11,6 +11,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -23,6 +25,11 @@ public class CostActivity extends AppCompatActivity implements Serializable {
     EditText today_memo;
     ImageButton btn_save;
     ImageButton btn_delete;
+
+    private String date;
+    private long mNow;
+    private Date mDate;
+    private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy.MM.dd");
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,16 +51,16 @@ public class CostActivity extends AppCompatActivity implements Serializable {
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String cost = today_cost.getText().toString();
+                int cost = Integer.parseInt(today_cost.getText().toString());
                 String memo = today_memo.getText().toString();
 
-                Call<Constructor> call = retrofitService.postCalendar(cost, memo);
+                Call<Constructor> call = retrofitService.postCalendar(cost, memo, date);
                 call.enqueue(new Callback<Constructor>() {
                     @Override
                     public void onResponse(Call<Constructor> call, Response<Constructor> response) {
                         if(response.isSuccessful()) {
                             Constructor constructorResult = response.body();
-                            Intent intent = new Intent(CostActivity.this, CalendarActivity.class);
+                            Intent intent = new Intent(CostActivity.this, Frag_Calendar.class);
                             intent.putExtra("cost", cost);
                             intent.putExtra("memo", memo);
                             startActivity(intent);
@@ -69,5 +76,12 @@ public class CostActivity extends AppCompatActivity implements Serializable {
                 });
             }
         });
+    }
+
+    private String getTime() {
+        mNow = System.currentTimeMillis();
+        mDate = new Date(mNow);
+        date = mFormat.format(mDate);
+        return date;
     }
 }

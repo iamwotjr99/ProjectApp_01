@@ -10,6 +10,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Frag_Calendar frag_calendar;
     private Frag_ChatList frag_chatList;
     private Frag_FriendList frag_friendList;
     private BottomNavigationView bottomNavigationView;
@@ -43,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
         frag_chatList = new Frag_ChatList();
         frag_chatList.setArguments(bundle);
 
+        frag_calendar = new Frag_Calendar();
+        frag_calendar.setArguments(bundle);
+
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.lobby_container, frag_friendList)
                 .commit();
@@ -63,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.tab_chat_list:
                                 getSupportFragmentManager().beginTransaction()
                                         .replace(R.id.lobby_container, frag_chatList)
+                                        .commit();
+                                return true;
+
+                            case R.id.tab_expend:
+                                getSupportFragmentManager().beginTransaction()
+                                        .replace(R.id.lobby_container, frag_calendar)
                                         .commit();
                                 return true;
                         }

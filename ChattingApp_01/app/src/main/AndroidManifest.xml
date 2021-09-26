@@ -27,11 +27,6 @@
         <activity android:name=".RoomNameActivity"
             android:screenOrientation="portrait">
         </activity>
-        <activity
-            android:name=".CalendarActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
-        </activity>
         <activity android:name=".CostActivity"
             android:screenOrientation="portrait">
         </activity>
