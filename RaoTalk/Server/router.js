@@ -324,26 +324,25 @@ router.get('/get/Calender/:Month/:Day/:Cost', (req, res) => {
 
 //캘린더 내용 설정
 let costList = [];
-router.post('/post/calendar/:cost/:memo', (req, res) => {
+router.post('/post/calendar/:cost/:memo/:date', (req, res) => {
     let cost = req.params.cost;
     let memo = req.params.memo;
-    console.log("Post: {cost}: ", cost, ", {memo}: ", memo);
+    let date = req.params.date;
+    console.log("Post: {cost}: ", cost, ", {memo}: ", memo, ", {date}: ", date);
     let result = {
         cost : cost,
-        memo : memo
+        memo : memo,
+        date : date
     }
     res.send(result);
     costList.push(result);
 })
 
-router.get('/get/calendar/:cost/:memo', (req, res) => {
+router.get('/get/calendar/:cost/:memo/:date', (req, res) => {
     let cost = req.params.cost;
     let memo = req.params.memo;
-    console.log("Get: {cost}: ", cost, ", {memo}: ", memo);
-    let result = {
-        cost : cost,
-        memo : memo
-    }
+    let date = req.params.date;
+    console.log("Get: {cost}: ", cost, ", {memo}: ", memo, ", {date}: ", date);
     res.send(costList);
     console.log(costList);
 })
