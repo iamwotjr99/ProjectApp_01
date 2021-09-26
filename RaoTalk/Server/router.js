@@ -197,6 +197,130 @@ router.get("/get/:user_id/friendsList", (req, res) => {
         })
     })
 })
+// 채팅방 생성하기
+router.post("/post/:user_id/chatList/:roomName", (req, res) => {
+    let roomName = req.params.roomName;
+    let user_id = req.params.user_id;
+
+    console.log(roomName);
+    dbPool.getConnection((err, conn) => {
+        if(err) {
+            err.code = 500;
+            return err;
+        }
+        
+        let sql1 = "INSERT INTO room (name) VALUES (?);"
+        let sql2 = "INSERT INTO entry (user_id, room_id) VALUES (?, ?);"
+        conn.query(sql1, roomName, (err, result) => {
+            if(err) {
+                err.code = 500;
+                conn.release();
+                return err;
+            }
+            let room_id = result.insertId;
+
+            conn.query(sql2, [user_id, room_id], (err, resultEntry) => {
+                if(err) {
+                    err.code = 500;
+                    conn.release();
+                    return err;
+                }
+
+                console.log("Post Entry Success!!");
+                conn.release();
+            })
+
+            res.send(result);
+            console.log("Post chatRoom Success!!");
+        })
+    })
+})
+
+// user_id에 맞는 채팅방 가져오기
+router.get("/get/:user_id/chatList", (req, res) => {
+    let user_id = req.params.user_id;
+
+    dbPool.getConnection((err, conn) => {
+        if(err) {
+            err.code = 500;
+            console.log("error");
+            return err;
+        }
+
+        let sql1 = "SELECT entry.user_id AS user_id, room.room_id AS room_id, room.name AS roomName FROM entry LEFT JOIN room ON entry.room_id = room.room_id WHERE user_id = ?;"
+
+        conn.query(sql1, user_id, (err, result) => {
+            if(err) {
+                err.code = 500;
+                console.log("error");
+                conn.release();
+                return err;
+            }
+
+            console.log(result);
+            res.send(result);
+            conn.release();
+        })
+    })
+})
+
+// Cost Calender insert values
+router.post('/post/calender', (req, res) => {
+    let Month = req.body.Month;
+    let Day = req.body.Day;
+    let Cost = req.body.Cost;
+    
+    dbPool.getConnection((err, conn) => {
+        if(err) {
+            err.code = 500;
+            console.log("error");
+            return err;
+        }
+        let sql = 'INSERT INTO Calender (Month, Day, Cost) VALUES(?,?,?);'
+        conn.query(sql, [Month, Day, Cost], (err, result) => {
+            if(err) {
+                err.code = 500;
+                console.log("error");
+                conn.release();
+                return err;
+            }
+
+            conn.release();
+            console.log(Month, Day, Cost);
+            console.log('Post Success!');
+        })
+    })
+});
+
+//Cost Calener show values
+router.get('/get/Calender/:Month/:Day/:Cost', (req, res) => {
+    let Month = req.params.Month;
+    let Day = req.params.Day;
+    let Cost = req.params.Cost;
+
+    console.log(Month, Day, Cost);
+    dbPool.getConnection((err, conn) => {
+        if(err) {
+            err.code = 500;
+            return err;
+        }
+        
+        let sql = 'SELECT * FROM Calender WHERE Month = ? AND Day = ? AND Cost = ?';
+    
+        conn.query(sql, [Month, Day, Cost], (err, result) => {
+            if(err) {
+                err.code = 500;
+                conn.release();
+                return err;
+            }
+            
+            res.send(result[0]);
+            conn.release();
+            console.log(result[0]);
+            console.log('Get Success!');
+        })
+    })
+});
 
 //캘린더 내용 설정
 let costList = [];

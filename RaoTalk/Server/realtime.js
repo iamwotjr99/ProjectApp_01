@@ -27,9 +27,12 @@ io.on('connection', (socket) => {
     // });
 
     socket.on('new message', (data) => {
+        socket.join(data.room_id);
+        
         let user_id = data.user_id;
         let name = data.username;
         let message = data.message;
+        let room_id = data.room_id;
 
         console.log("메세지 데이터: ", data);
 
@@ -39,9 +42,9 @@ io.on('connection', (socket) => {
                 return err;
             }
 
-            let sql = 'INSERT INTO msg (user_id, name, message) VALUES (?, ?, ?)'
+            let sql = 'INSERT INTO message (user_id, room_id, message) VALUES (?, ?, ?)'
 
-            conn.query(sql, [user_id, name, message], (err, result) => {
+            conn.query(sql, [user_id, room_id, message], (err, result) => {
                 if(err) {
                     err.code = 500;
                     conn.release();
@@ -52,6 +55,6 @@ io.on('connection', (socket) => {
             })
         })
         
-        socket.broadcast.emit('new message', data);
-    });
+        socket.broadcast.to(data.room_id).emit("new message", data);
+    })
 })
