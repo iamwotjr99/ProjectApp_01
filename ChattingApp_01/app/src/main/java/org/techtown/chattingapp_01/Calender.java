@@ -4,29 +4,25 @@ import com.google.gson.annotations.SerializedName;
 
 public class Calender {
 
-    @SerializedName("Month")
-    private String Month;
-
-    @SerializedName("Day")
-    private String Day;
+    @SerializedName("Date")
+    private String Date;
 
     @SerializedName("Cost")
     private String Cost;
 
-    public String getMonth() {
-        return Month;
+    @SerializedName("Memo")
+    private String Memo;
+
+    public String getDate(){return Date;}
+
+    public void setDate(String Date) {
+        this.Date = Date;
     }
 
-    public void setMonth(String Month) {
-        this.Month = Month;
-    }
+    public String getMemo() {return Memo;}
 
-    public String getDay() {
-        return Day;
-    }
-
-    public void setDay(String Day) {
-        this.Day = Day;
+    public void setMemo(String Memo) {
+        this.Memo = Memo;
     }
 
     public String getCost() {
@@ -37,14 +33,13 @@ public class Calender {
         this.Cost = Cost;
     }
 
-    public Calender(String Month, String Day, String Cost) {
-        this.Month = Month;
-        this.Day = Day;
+    public Calender(String Date, String cost, String Memo) {
+        this.Date = Date;
         this.Cost = Cost;
+        this.Memo = Memo;
     }
-    public Calender(String Month, String Day) {
-        this.Month = Month;
-        this.Day = Day;
+    public Calender(String Date) {
+        this.Date =Date;
     }
 
 }
