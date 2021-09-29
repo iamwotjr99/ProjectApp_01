@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ScrollView;
 
 import com.google.android.material.tabs.TabLayout;
@@ -47,7 +48,9 @@ public class MainActivity extends AppCompatActivity {
         frag_FiveThousand = new Frag_fiveThousand();
 
         webView = (WebView) findViewById(R.id.webView);
-        webView.loadUrl("");
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("http://172.23.12.39:5000/qgis2web1");
         
         getSupportFragmentManager().beginTransaction().replace(R.id.container, frag_OneThousand).commit();
 
