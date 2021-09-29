@@ -74,7 +74,7 @@ public class SetProfileActivity extends AppCompatActivity {
             }
         });
 
-        String defaultProfile = "android.resource://org.techtown.sockettest/drawable/" +
+        String defaultProfile = "android.resource://org.techtown.chattingapp_01/drawable/" +
                 "friend";
         defaultProfileUri = Uri.parse(defaultProfile);
 
@@ -89,7 +89,7 @@ public class SetProfileActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {
                         Log.d("PostUserProfile", "Default Profile Send!");
-                        imageProfile.setImageURI(defaultProfileUri);
+                        // imageProfile.setImageURI(defaultProfileUri);
                     }
 
                     @Override

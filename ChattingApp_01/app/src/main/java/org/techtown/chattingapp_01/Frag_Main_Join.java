@@ -66,9 +66,9 @@ public class Frag_Main_Join extends Fragment {
                 String password = joinPW.getText().toString();
                 String name = joinName.getText().toString();
 
-                // user = new User(name, email, password);
+                user = new User(name, email, password);
 
-                Call<User> postCall = retrofitAPI.postUser(name, email, password);
+                Call<User> postCall = retrofitAPI.postUser(user);
 
                 postCall.enqueue(new Callback<User>() {
                     @Override

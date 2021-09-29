@@ -85,10 +85,12 @@ public class Frag_FriendList extends Fragment {
                     if (response.isSuccessful()) {
                         List<Friends> friends = response.body();
                         for(int i = 0; i < friends.size(); i++) {
-                            friendsList.add(new Friends(friends.get(i).getFr_name(),
-                                    friends.get(i).getFr_profile()));
-                            adapter.notifyDataSetChanged();
-                            Log.d("Friends Data", friends.get(i).getFr_name());
+                            // 친구 목록에 중복으로 계속 add 되는 오류 해결
+                            if(friends.size() != friendsList.size()){
+                                friendsList.add(new Friends(friends.get(i).getFr_name(),
+                                        friends.get(i).getFr_profile()));
+                                adapter.notifyDataSetChanged();
+                            }
                         }
                     } else {
                         Log.d("getFriendCall", "Fail");
