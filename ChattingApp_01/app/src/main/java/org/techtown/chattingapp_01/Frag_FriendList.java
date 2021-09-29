@@ -52,7 +52,7 @@ public class Frag_FriendList extends Fragment {
             btnSearch = view.findViewById(R.id.btn_search);
             btnAddFriend = view.findViewById(R.id.btn_addFriend);
 
-            mUserProfileUri = Uri.parse(mUserProfile);
+            // mUserProfileUri = Uri.parse(mUserProfile);
 
             imageProfile.setImageURI(mUserProfileUri);
             tvName.setText(mUserName);

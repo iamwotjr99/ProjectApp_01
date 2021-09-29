@@ -69,7 +69,7 @@ public class Frag_ChatList extends Fragment {
             }
         });
 
-        String roomProfileString = "android.resource://org.techtown.sockettest/drawable/" + "img_person";
+        String roomProfileString = "android.resource://org.techtown.chattingapp_01/drawable/" + "img_person";
         Uri roomProfileUri = Uri.parse(roomProfileString);
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -114,7 +114,7 @@ public class Frag_ChatList extends Fragment {
                 roomID = mList.get(position).getRoomID();
                 roomName = mList.get(position).getRoomName();
                 Log.d("setOnItemClickListener", String.valueOf(mList.get(position).getRoomID()));
-                Intent intent = new Intent(getContext(), MainActivity.class);
+                Intent intent = new Intent(getContext(), ChatActivity.class);
                 intent.putExtra("userName", mUserName);
                 intent.putExtra("userID", mUserID);
                 intent.putExtra("roomID", roomID);
