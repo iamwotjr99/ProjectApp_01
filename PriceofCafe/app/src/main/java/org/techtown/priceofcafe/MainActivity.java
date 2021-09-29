@@ -7,35 +7,25 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
-import android.widget.ListView;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ScrollView;
-import android.widget.Toast;
+
 import com.google.android.material.tabs.TabLayout;
-import org.techtown.priceofcafe.R;
-import org.techtown.priceofcafe.Fragment1;
-import org.techtown.priceofcafe.Fragment2;
-import org.techtown.priceofcafe.Fragment3;
-import org.techtown.priceofcafe.Fragment4;
-import org.techtown.priceofcafe.Fragment5;
-import org.techtown.priceofcafe.R;
+
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
-    Fragment1 fragment1;
-    Fragment2 fragment2;
-    Fragment3 fragment3;
-    Fragment4 fragment4;
-    Fragment5 fragment5;
-    ScrollView scrollView;
+    private Toolbar toolbar;
+    private Frag_oneThousand frag_OneThousand;
+    private Frag_twoThousand frag_TwoThousand;
+    private Frag_threeThousand frag_ThreeThousand;
+    private Frag_fourThousand frag_FourThousand;
+    private Frag_fiveThousand frag_FiveThousand;
+    private ScrollView scrollView;
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,20 +41,25 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowTitleEnabled(false);
 
-        fragment1 = new Fragment1();
-        fragment2 = new Fragment2();
-        fragment3 = new Fragment3();
-        fragment4 = new Fragment4();
-        fragment5 = new Fragment5();
+        frag_OneThousand = new Frag_oneThousand();
+        frag_TwoThousand = new Frag_twoThousand();
+        frag_ThreeThousand = new Frag_threeThousand();
+        frag_FourThousand = new Frag_fourThousand();
+        frag_FiveThousand = new Frag_fiveThousand();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment1).commit();
+        webView = (WebView) findViewById(R.id.webView);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("http://172.23.12.39:5000/qgis2web1");
+        
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, frag_OneThousand).commit();
 
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.addTab(tabs.newTab().setText("1000"));
         tabs.addTab(tabs.newTab().setText("2000"));
         tabs.addTab(tabs.newTab().setText("3000"));
         tabs.addTab(tabs.newTab().setText("4000"));
-        tabs.addTab(tabs.newTab().setText("5.0-X.0"));
+        tabs.addTab(tabs.newTab().setText("5000~"));
 
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
@@ -76,15 +71,15 @@ public class MainActivity extends AppCompatActivity {
 
                 Fragment selected = null;
                 if (position == 0) {
-                    selected = fragment1;
+                    selected = frag_OneThousand;
                 } else if (position == 1) {
-                    selected = fragment2;
+                    selected = frag_TwoThousand;
                 } else if (position == 2) {
-                    selected = fragment3;
+                    selected = frag_ThreeThousand;
                 } else if (position == 3) {
-                    selected = fragment4;
+                    selected = frag_FourThousand;
                 } else if (position == 4) {
-                    selected = fragment5;
+                    selected = frag_FiveThousand;
                 }
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.container, selected).commit();
