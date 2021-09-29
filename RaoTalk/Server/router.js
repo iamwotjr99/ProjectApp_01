@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
+const dbPool = require('./dbconfig');
 
 router.get('/', serverTest);
 
@@ -72,6 +73,8 @@ router.post('/post/user', (req, res) => {
     let name = req.body.name;
     let email = req.body.email;
     let password = req.body.password;
+
+    console.log(name);
     
     dbPool.getConnection((err, conn) => {
         if(err) {
@@ -162,7 +165,7 @@ router.post("/post/user/:user_id/add/:friend_id", (req, res) => {
     let friend_password = req.body.password;
     let frined_profile = req.body.profile;
 
-    console.log(user_id, friend_id);
+    console.log(friend_name);
 
     dbPool.getConnection((err, conn) => {
         if(err) {
@@ -171,9 +174,9 @@ router.post("/post/user/:user_id/add/:friend_id", (req, res) => {
             return err;
         }
 
-        let sql = "INSERT INTO friends (user_id, fr_name, fr_email, fr_password, fr_profile, friend_id) VALUES (?, ?, ?, ?, ?, ?)"
+        let sql = "INSERT INTO friend (friend_id, user_id, fr_name, fr_email, fr_password, fr_profile) VALUES (?, ?, ?, ?, ?, ?)"
 
-        conn.query(sql, [user_id, friend_name, friend_email, friend_password, frined_profile, friend_id], (err, result) => {
+        conn.query(sql, [friend_id, user_id, friend_name, friend_email, friend_password, frined_profile], (err, result) => {
             if(err) {
                 err.code = 500;
                 console.log("error");
@@ -182,6 +185,7 @@ router.post("/post/user/:user_id/add/:friend_id", (req, res) => {
             }
 
             res.send(result);
+            console.log(result);
             console.log("Post Friends Success!");
         })
     })
@@ -200,8 +204,8 @@ router.get("/get/:user_id/friendsList", (req, res) => {
             return err;
         }
 
-        let sql = "SELECT * FROM friends WHERE user_id = ?;"
-        
+        let sql = "SELECT * FROM friend WHERE user_id = ?;"
+       
         conn.query(sql, user_id, (err, result) => {
             if(err) {
                 err.code = 500;
@@ -283,12 +287,12 @@ router.get("/get/:user_id/chatList", (req, res) => {
         })
     })
 })
-/*
+
 // Cost Calender insert values
 router.post('/post/calender', (req, res) => {
-    let date = req.params.date;
-    let cost = req.params.cost;
-    let memo = req.params.memo;
+    let Month = req.body.Month;
+    let Day = req.body.Day;
+    let Cost = req.body.Cost;
     
     dbPool.getConnection((err, conn) => {
         if(err) {
@@ -296,8 +300,8 @@ router.post('/post/calender', (req, res) => {
             console.log("error");
             return err;
         }
-        let sql = 'INSERT INTO Calender (Date, Cost, Memo) VALUES(?,?,?);'
-        conn.query(sql, [date, cost, memo], (err, result) => {
+        let sql = 'INSERT INTO Calender (Month, Day, Cost) VALUES(?,?,?);'
+        conn.query(sql, [Month, Day, Cost], (err, result) => {
             if(err) {
                 err.code = 500;
                 console.log("error");
@@ -306,7 +310,7 @@ router.post('/post/calender', (req, res) => {
             }
 
             conn.release();
-            console.log(date, cost, memo);
+            console.log(Month, Day, Cost);
             console.log('Post Success!');
         })
     })
@@ -341,17 +345,14 @@ router.get('/get/Calender/:Month/:Day/:Cost', (req, res) => {
         })
     })
 });
-*/
+
 //캘린더 내용 설정
-/*let costList = [];
+let costList = [];
 router.post('/post/calendar/:cost/:memo/:date', (req, res) => {
     let cost = req.params.cost;
     let memo = req.params.memo;
     let date = req.params.date;
     console.log("Post: {cost}: ", cost, ", {memo}: ", memo, ", {date}: ", date);
-
-    let sql = 'INSERT INTO Calender (Date, Cost, Memo) VALUES(?,?,?);'
-
     let result = {
         cost : cost,
         memo : memo,
@@ -366,74 +367,8 @@ router.get('/get/calendar/:cost/:memo/:date', (req, res) => {
     let memo = req.params.memo;
     let date = req.params.date;
     console.log("Get: {cost}: ", cost, ", {memo}: ", memo, ", {date}: ", date);
-
-    let costList = 'SELECT * FROM Calender WHERE Date = ? AND Cost = ? AND  = ?';
-
     res.send(costList);
     console.log(costList);
-})
-*/
-
-//let result = [];
-router.post('/post/calendar/:cost/:memo/:date', (req, res) => {
-    let cost = req.params.cost;
-    let memo = req.params.memo;
-    let date = req.params.date;
-    console.log("Post: {cost}: ", cost, ", {memo}: ", memo, ", {date}: ", date);
-    dbPool.getConnection((err, conn) => {
-        if(err) {
-            err.code = 500;
-            return err;
-        }
-        
-        let sql = 'INSERT INTO Calender (Date, Cost, Memo) VALUES(?,?,?);'
-
-        //let result = {
-        //cost : cost,
-        //memo : memo,
-        //date : date
-        //}
-        conn.query(sql, [date, memo, cost], (err, result) => {
-            if(err) {
-                err.code = 500;
-                conn.release();
-                return err;
-            }
-            
-            res.send(result);
-            conn.release();
-            console.log(result);
-            console.log('Get Success!');
-        })
-    })
-})
-
-router.get('/get/calendar/:cost/:memo/:date', (req, res) => {
-    let date = req.params.date;
-
-    console.log("{date}: ", date);
-    dbPool.getConnection((err, conn) => {
-        if(err) {
-            err.code = 500;
-            return err;
-        }
-
-        let sql = 'SELECT * FROM Calender WHERE Date = ?';
-    
-        conn.query(sql, date, (err, result) => {
-
-            if(err) {
-                err.code = 500;
-                conn.release();
-                return err;
-            }
-            
-            res.send(result);
-            conn.release();
-            console.log(result);
-            console.log('Get Success!');
-        })
-    })
 })
 
 //채팅방 목록
