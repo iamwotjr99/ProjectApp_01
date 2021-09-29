@@ -165,7 +165,7 @@ router.post("/post/user/:user_id/add/:friend_id", (req, res) => {
     let friend_password = req.body.password;
     let frined_profile = req.body.profile;
 
-    console.log(user_id, friend_id);
+    console.log(friend_name);
 
     dbPool.getConnection((err, conn) => {
         if(err) {
@@ -185,6 +185,7 @@ router.post("/post/user/:user_id/add/:friend_id", (req, res) => {
             }
 
             res.send(result);
+            console.log(result);
             console.log("Post Friends Success!");
         })
     })
