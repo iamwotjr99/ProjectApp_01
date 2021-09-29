@@ -174,7 +174,7 @@ router.post("/post/user/:user_id/add/:friend_id", (req, res) => {
             return err;
         }
 
-        let sql = "INSERT INTO friends (user_id, fr_name, fr_email, fr_password, fr_profile, friend_id) VALUES (?, ?, ?, ?, ?, ?)"
+        let sql = "INSERT INTO friend (user_id, fr_name, fr_email, fr_password, fr_profile, friend_id) VALUES (?, ?, ?, ?, ?, ?)"
 
         conn.query(sql, [user_id, friend_name, friend_email, friend_password, frined_profile, friend_id], (err, result) => {
             if(err) {
@@ -203,7 +203,7 @@ router.get("/get/:user_id/friendsList", (req, res) => {
             return err;
         }
 
-        let sql = "SELECT * FROM friends WHERE user_id = ?;"
+        let sql = "SELECT * FROM friend WHERE user_id = ?;"
        
         conn.query(sql, user_id, (err, result) => {
             if(err) {
