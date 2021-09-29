@@ -15,8 +15,8 @@ import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface RetrofitAPI {
-    @POST("/post/user")
-    Call<User> postUser(@Body User user);
+    @POST("/post/user/{name}/{email}/{password}")
+    Call<User> postUser(@Path("name") String name, @Path("email") String email, @Path("password") String password);
 
     @GET("/get/user/{email}/{password}")
     Call<User> getUser(@Path("email") String email, @Path("password") String password);

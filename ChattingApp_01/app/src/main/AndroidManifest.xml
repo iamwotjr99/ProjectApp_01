@@ -32,6 +32,7 @@
         </activity>
         <activity android:name=".SetProfileActivity"></activity>
         <activity android:name=".AddFriendActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
