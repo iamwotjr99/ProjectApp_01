@@ -68,6 +68,8 @@ router.post('/post/user', (req, res) => {
     let name = req.body.name;
     let email = req.body.email;
     let password = req.body.password;
+
+    console.log(name);
     
     dbPool.getConnection((err, conn) => {
         if(err) {

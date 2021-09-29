@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.concurrent.TimeUnit;
 
@@ -46,7 +47,7 @@ public class SetProfileActivity extends AppCompatActivity {
     Gson gson = new GsonBuilder().setLenient().create();
 
     Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://192.168.219.101:3000")
+            .baseUrl(ServerURL.RETROFIT_SERVER_URL)
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build();
