@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("http://172.23.12.39:5000/qgis2web1");
+        webView.loadUrl("http://172.23.12.39:5000/qgis2web0");
         
         getSupportFragmentManager().beginTransaction().replace(R.id.container, frag_OneThousand).commit();
 
@@ -72,14 +72,19 @@ public class MainActivity extends AppCompatActivity {
                 Fragment selected = null;
                 if (position == 0) {
                     selected = frag_OneThousand;
+                    webView.loadUrl("http://172.23.12.39:5000/qgis2web1");
                 } else if (position == 1) {
                     selected = frag_TwoThousand;
+                    webView.loadUrl("http://172.23.12.39:5000/qgis2web2");
                 } else if (position == 2) {
                     selected = frag_ThreeThousand;
+                    webView.loadUrl("http://172.23.12.39:5000/qgis2web3");
                 } else if (position == 3) {
                     selected = frag_FourThousand;
+                    webView.loadUrl("http://172.23.12.39:5000/qgis2web4");
                 } else if (position == 4) {
                     selected = frag_FiveThousand;
+                    webView.loadUrl("http://172.23.12.39:5000/qgis2web5");
                 }
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.container, selected).commit();

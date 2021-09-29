@@ -8,6 +8,10 @@ router.get('/qgis2web', (req, res) => {
 =======
 router.get('/', serverTest);
 
+router.get('/qgis2web0', (req, res) => {
+    res.sendFile(path.join(__dirname, '/qgis2web_total/index.html'));
+})
+
 router.get('/qgis2web1', (req, res) => {
     res.sendFile(path.join(__dirname, '/qgis2web_oneThousand/index.html'));
 })
