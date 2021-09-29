@@ -70,9 +70,9 @@ router.get('/get/user/:email/:password', (req, res) => {
 
 // 회원가입
 router.post('/post/user/:name/:email/:password', (req, res) => {
-    let name = req.body.name;
-    let email = req.body.email;
-    let password = req.body.password;
+    let name = req.params.name;
+    let email = req.params.email;
+    let password = req.params.password;
 
     console.log(name);
     
