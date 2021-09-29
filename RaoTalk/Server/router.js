@@ -4,8 +4,24 @@ const path = require('path');
 
 router.get('/', serverTest);
 
-router.get('/qgis2web', (req, res) => {
-    res.sendFile(path.join(__dirname, '/qgis2web/index.html'));
+router.get('/qgis2web1', (req, res) => {
+    res.sendFile(path.join(__dirname, '/qgis2web_oneThousand/index.html'));
+})
+
+router.get('/qgis2web2', (req, res) => {
+    res.sendFile(path.join(__dirname, '/qgis2web_twoThousand/index.html'));
+})
+
+router.get('/qgis2web3', (req, res) => {
+    res.sendFile(path.join(__dirname, '/qgis2web_threeThousand/index.html'));
+})
+
+router.get('/qgis2web4', (req, res) => {
+    res.sendFile(path.join(__dirname, '/qgis2web_fourThousand/index.html'));
+})
+
+router.get('/qgis2web5', (req, res) => {
+    res.sendFile(path.join(__dirname, '/qgis2web_fiveThousand/index.html'));
 })
 
 // 로그인

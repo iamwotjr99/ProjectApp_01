@@ -26,7 +26,7 @@
                     android:id="@+id/titleText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="가격대별 카페  "
+                    android:text="가격대별 카페"
                     android:textAppearance="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
                     android:textColor="#000000" />
 
@@ -56,11 +56,16 @@
             android:layout_height="250dp"
             android:layout_marginTop="105dp">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/mapex"/>
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:src="@drawable/mapex"/>-->
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/webView"></WebView>
 
         </LinearLayout>
 

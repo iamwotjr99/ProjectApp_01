@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment;
 
 import org.techtown.priceofcafe.R;
 
-public class Fragment5 extends Fragment {
+public class Frag_fiveThousand extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
