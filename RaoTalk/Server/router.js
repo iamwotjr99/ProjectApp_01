@@ -176,7 +176,7 @@ router.post("/post/user/:user_id/add/:friend_id", (req, res) => {
 
         let sql = "INSERT INTO friend (friend_id, user_id, fr_name, fr_email, fr_password, fr_profile) VALUES (?, ?, ?, ?, ?, ?)"
 
-        conn.query(sql, [user_id, friend_name, friend_email, friend_password, frined_profile, friend_id], (err, result) => {
+        conn.query(sql, [friend_id, user_id, friend_name, friend_email, friend_password, frined_profile], (err, result) => {
             if(err) {
                 err.code = 500;
                 console.log("error");
