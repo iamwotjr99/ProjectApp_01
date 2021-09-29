@@ -45,6 +45,8 @@ public class ChatActivity extends AppCompatActivity {
     private static final int TYPING_TIMER_LENGTH = 600;
     private String mUsername;
     private int mUserID;
+    private int roomID;
+    private String intentRoomName;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -54,6 +56,8 @@ public class ChatActivity extends AppCompatActivity {
 
         mUsername = getIntent().getExtras().getString("username");
         mUserID = getIntent().getExtras().getInt("userID");
+        roomID = getIntent().getExtras().getInt("roomID");
+        intentRoomName = getIntent().getExtras().getString("roomName");
 
         ChatApplication app = (ChatApplication) getApplication();
         mSocket = app.getSocket();
@@ -159,6 +163,7 @@ public class ChatActivity extends AppCompatActivity {
             data.put("user_id", mUserID);
             data.put("username", mUsername);
             data.put("message", message);
+            data.put("room_id", roomID);
 
             mSocket.emit("new message", data);
         } catch (JSONException e) {
