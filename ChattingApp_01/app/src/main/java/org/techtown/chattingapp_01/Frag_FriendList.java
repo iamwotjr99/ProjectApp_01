@@ -71,7 +71,7 @@ public class Frag_FriendList extends Fragment {
             });
 
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("")
+                    .baseUrl(ServerURL.RETROFIT_SERVER_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 

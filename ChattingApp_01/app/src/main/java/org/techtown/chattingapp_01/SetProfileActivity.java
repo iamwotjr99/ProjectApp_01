@@ -47,11 +47,7 @@ public class SetProfileActivity extends AppCompatActivity {
     Gson gson = new GsonBuilder().setLenient().create();
 
     Retrofit retrofit = new Retrofit.Builder()
-<<<<<<< HEAD
             .baseUrl(ServerURL.RETROFIT_SERVER_URL)
-=======
-            .baseUrl("http://ec2-15-164-230-128.ap-northeast-2.compute.amazonaws.com:3000")
->>>>>>> 96c478fcbced409d31dc112b8a15843456f79f8b
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build();

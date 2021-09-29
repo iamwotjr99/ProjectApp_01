@@ -35,7 +35,7 @@ public class AddFriendActivity extends AppCompatActivity {
         setContentView(R.layout.activitiy_add_friend);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://ec2-15-164-230-128.ap-northeast-2.compute.amazonaws.com:3000")
+                .baseUrl(ServerURL.RETROFIT_SERVER_URL)
                 .addConverterFactory(new NullOnEmptyConverterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

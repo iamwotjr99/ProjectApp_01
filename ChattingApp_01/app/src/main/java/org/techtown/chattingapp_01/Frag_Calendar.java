@@ -62,7 +62,7 @@ public class Frag_Calendar extends Fragment {
         });
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://ec2-15-164-230-128.ap-northeast-2.compute.amazonaws.com:3000")
+                .baseUrl(ServerURL.RETROFIT_SERVER_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
