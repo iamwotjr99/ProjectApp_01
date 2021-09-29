@@ -4,7 +4,7 @@ const dbInfo = {
     user : 'fisixeven',
     password : 'j1y35670',
     port : 3306,
-    database : 'TESTDB'
+    database : 'raotalk'
 }
 
 const dbPool = mysql.createPool(dbInfo);

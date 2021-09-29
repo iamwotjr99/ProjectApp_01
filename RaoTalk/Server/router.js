@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 
-router.get('/', serverTest);
-
 router.get('/qgis2web', (req, res) => {
     res.sendFile(path.join(__dirname, '/qgis2web/index.html'));
 })
@@ -52,7 +50,7 @@ router.post('/post/user', (req, res) => {
     let name = req.body.name;
     let email = req.body.email;
     let password = req.body.password;
-    
+    console.log(name);
     dbPool.getConnection((err, conn) => {
         if(err) {
             err.code = 500;
@@ -181,7 +179,7 @@ router.get("/get/:user_id/friendsList", (req, res) => {
         }
 
         let sql = "SELECT * FROM friends WHERE user_id = ?;"
-       
+        
         conn.query(sql, user_id, (err, result) => {
             if(err) {
                 err.code = 500;
@@ -211,6 +209,7 @@ router.post("/post/:user_id/chatList/:roomName", (req, res) => {
         
         let sql1 = "INSERT INTO room (name) VALUES (?);"
         let sql2 = "INSERT INTO entry (user_id, room_id) VALUES (?, ?);"
+
         conn.query(sql1, roomName, (err, result) => {
             if(err) {
                 err.code = 500;
@@ -250,6 +249,7 @@ router.get("/get/:user_id/chatList", (req, res) => {
         let sql1 = "SELECT entry.user_id AS user_id, room.room_id AS room_id, room.name AS roomName FROM entry LEFT JOIN room ON entry.room_id = room.room_id WHERE user_id = ?;"
 
         conn.query(sql1, user_id, (err, result) => {
+
             if(err) {
                 err.code = 500;
                 console.log("error");
@@ -293,21 +293,21 @@ router.post('/post/calender', (req, res) => {
 });
 
 //Cost Calener show values
-router.get('/get/Calender/:Month/:Day/:Cost', (req, res) => {
-    let Month = req.params.Month;
-    let Day = req.params.Day;
+router.get('/get/Calender/:Date/:Cost/:Memo', (req, res) => {
+    let Date= req.params.Date;
+    let Memo = req.params.Memo;
     let Cost = req.params.Cost;
 
-    console.log(Month, Day, Cost);
+    console.log(Date, Cost, Memo);
     dbPool.getConnection((err, conn) => {
         if(err) {
             err.code = 500;
             return err;
         }
         
-        let sql = 'SELECT * FROM Calender WHERE Month = ? AND Day = ? AND Cost = ?';
+        let sql = 'SELECT * FROM Calender WHERE Date = ?';
     
-        conn.query(sql, [Month, Day, Cost], (err, result) => {
+        conn.query(sql, [Date, Memo, Cost], (err, result) => {
             if(err) {
                 err.code = 500;
                 conn.release();
@@ -322,12 +322,70 @@ router.get('/get/Calender/:Month/:Day/:Cost', (req, res) => {
     })
 });
 
+//캘린더  값 수정
+router.put('/put/Calender', (req, res) => {
+    let Date = req.body.Date;
+
+    dbPool.getConnection((err, conn) => {
+        if(err) {
+            err.code = 500;
+            console.log("error");
+            return err;
+        }
+
+        let sql = 'select * from Calender Where Date = ?;'
+
+        conn.query(sql, Date, (err, result) => {
+            if(err) {
+                err.code = 500;
+                console.log("error");
+                conn.release();
+                return err;
+            }
+
+            conn.release();
+            console.log(Date);
+            res.send(result);
+            console.log('Put Success!');
+        })
+    })
+})
+
+router.delete('/put/Calender', (req, res) => {
+    let Date = req.body.Date;
+
+    dbPool.getConnection((err, conn) => {
+        if(err) {
+            err.code = 500;
+            console.log("error");
+            return err;
+        }
+        
+        let sql = 'DELETE FROM Calender where Date = ?;'
+
+        conn.query(sql, Date, (err, result) => {
+            if(err) {
+                err.code = 500;
+                console.log("error");
+                conn.release();
+                return err;
+            }
+
+            conn.release();
+            console.log(Date);
+            res.send(result);
+            console.log('Put Success!');
+        })
+    })
+})
+
+/*
 //캘린더 내용 설정
-let costList = [];
 router.post('/post/calendar/:cost/:memo/:date', (req, res) => {
     let cost = req.params.cost;
     let memo = req.params.memo;
     let date = req.params.date;
+
     console.log("Post: {cost}: ", cost, ", {memo}: ", memo, ", {date}: ", date);
     let result = {
         cost : cost,
@@ -365,5 +423,6 @@ router.get('/get/chatList/:title', (req, res) => {
 function serverTest(req, res) {
     res.send('Hello World!!');
 }
+*/
 
 module.exports = router;
