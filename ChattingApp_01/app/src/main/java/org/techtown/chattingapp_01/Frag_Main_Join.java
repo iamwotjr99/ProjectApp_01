@@ -75,7 +75,7 @@ public class Frag_Main_Join extends Fragment {
                     public void onResponse(Call<User> call, Response<User> response) {
                         if(response.isSuccessful()) {
                             User userResult = response.body();
-                            // Log.d("PostCall", userResult.toString());
+                            Log.d("PostCall","ok");
                             Toast.makeText(getContext(), "회원가입 성공!", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getActivity(), SetProfileActivity.class);
                             intent.putExtra("userName", name);
