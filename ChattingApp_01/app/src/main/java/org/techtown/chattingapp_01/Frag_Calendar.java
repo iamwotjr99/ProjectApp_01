@@ -68,7 +68,7 @@ public class Frag_Calendar extends Fragment {
 
         RetrofitAPI retrofitService = retrofit.create(RetrofitAPI.class);
 
-        Call<List<Constructor>> call = retrofitService.getCalendar(mCost, mMemo, date);
+        Call<List<Constructor>> call = retrofitService.getCalendar(mCost, mMemo);
         call.enqueue(new Callback<List<Constructor>>() {
             @Override
             public void onResponse(Call<List<Constructor>> call, Response<List<Constructor>> response) {

@@ -38,10 +38,10 @@ public interface RetrofitAPI {
     Call<List<Friends>> getFriends(@Path("user_id") int user_id);
 
     @POST("/post/calendar/{cost}/{memo}/{date}")
-    Call<Constructor> postCalendar(@Path("cost") int cost, @Path("memo") String memo, @Path("cost") String date);
+    Call<Constructor> postCalendar(@Path("cost") int cost, @Path("memo") String memo, @Path("date") String date);
 
     @GET("/get/calendar/{cost}/{memo}")
-    Call<List<Constructor>> getCalendar(@Path("cost") int cost, @Path("memo") String memo, @Path("cost") String date);
+    Call<List<Constructor>> getCalendar(@Path("cost") int cost, @Path("memo") String memo);
 
     @POST("/post/{user_id}/chatList/{roomName}")
     Call<Room> postChatList(@Path("user_id") int user_id, @Path("roomName") String roomName);

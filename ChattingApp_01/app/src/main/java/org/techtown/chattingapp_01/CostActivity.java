@@ -53,17 +53,16 @@ public class CostActivity extends AppCompatActivity implements Serializable {
             public void onClick(View v) {
                 int cost = Integer.parseInt(today_cost.getText().toString());
                 String memo = today_memo.getText().toString();
-
-                Call<Constructor> call = retrofitService.postCalendar(cost, memo, date);
+                Log.d("cost", String.valueOf(cost));
+                Log.d("memo", memo);
+                Log.d("date", getTime());
+                Call<Constructor> call = retrofitService.postCalendar(cost, memo, getTime());
                 call.enqueue(new Callback<Constructor>() {
                     @Override
                     public void onResponse(Call<Constructor> call, Response<Constructor> response) {
                         if(response.isSuccessful()) {
                             Constructor constructorResult = response.body();
-                            Intent intent = new Intent(CostActivity.this, Frag_Calendar.class);
-                            intent.putExtra("cost", cost);
-                            intent.putExtra("memo", memo);
-                            startActivity(intent);
+                            finish();
                         } else {
                             Log.d("ResponsePostCall", "실패");
                             }
