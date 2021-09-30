@@ -69,6 +69,12 @@ public class Friends {
         this.friend_id = friend_id;
     }
 
+    public Friends(String fr_name, String fr_profile, int friend_id) {
+        this.fr_name = fr_name;
+        this.fr_profile = fr_profile;
+        this.friend_id = friend_id;
+    }
+
     public Friends(String fr_name, String fr_profile) {
         this.fr_name = fr_name;
         this.fr_profile = fr_profile;

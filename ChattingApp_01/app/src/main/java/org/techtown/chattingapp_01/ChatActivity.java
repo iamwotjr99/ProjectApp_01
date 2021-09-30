@@ -1,5 +1,6 @@
 package org.techtown.chattingapp_01;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -116,6 +117,20 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
 
+            }
+        });
+
+        ImageButton imgBtnInvite = findViewById(R.id.imgButton_invite);
+        imgBtnInvite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("BtnInvite", "OK");
+                Intent intent = new Intent(getApplication(), InviteFriendActivity.class);
+                intent.putExtra("userName", mUsername);
+                intent.putExtra("userID", mUserID);
+                intent.putExtra("roomID", roomID);
+                intent.putExtra("roomName", intentRoomName);
+                startActivity(intent);
             }
         });
 

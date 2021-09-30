@@ -288,6 +288,34 @@ router.get("/get/:user_id/chatList", (req, res) => {
     })
 })
 
+// user_id, room_id를 통해 채팅방에 친구 초대하기
+router.post("/post/invite/:user_id/:room_id", (req, res) => {
+    let user_id = req.params.user_id;
+    let room_id = req.params.room_id;
+
+    console.log(user_id, room_id);
+
+    dbPool.getConnection((err, conn) => {
+        if(err) {
+            err.code = 500;
+            return err;
+        }
+
+        let sql1 = "INSERT INTO entry (user_id, room_id) VALUES(?, ?)"
+        conn.query(sql1, [user_id, room_id], (err, result) => {
+            if(err) {
+                err.code = 500;
+                conn.release();
+                return err;
+            }
+
+            res.send(result);
+            console.log("Invite Post Success!");
+            conn.release();
+        })
+    })
+})
+
 // Cost Calender insert values
 router.post('/post/calender', (req, res) => {
     let Month = req.body.Month;

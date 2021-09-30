@@ -48,4 +48,7 @@ public interface RetrofitAPI {
 
     @GET("/get/{user_id}/chatList")
     Call<List<Room>> getChatList(@Path("user_id") int user_id);
+
+    @POST("/post/invite/{user_id}/{room_id}")
+    Call<Room> postInvite(@Path("user_id") int user_id, @Path("room_id") int room_id);
 }

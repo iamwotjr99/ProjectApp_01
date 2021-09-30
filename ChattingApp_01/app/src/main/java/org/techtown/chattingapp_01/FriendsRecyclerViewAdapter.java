@@ -15,7 +15,18 @@ import java.util.List;
 
 public class FriendsRecyclerViewAdapter extends RecyclerView.Adapter<FriendsRecyclerViewAdapter.
         ViewHolder> {
+
+    public interface OnItemClickListener {
+        void onItemClick(View v, int position);
+    }
+
     private List<Friends> mFriendsList;
+
+    private OnItemClickListener mListener = null;
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.mListener = listener;
+    }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -27,6 +38,18 @@ public class FriendsRecyclerViewAdapter extends RecyclerView.Adapter<FriendsRecy
 
             friendName = itemView.findViewById(R.id.tv_friendName);
             imageFriendProfile = itemView.findViewById(R.id.image_friendProfile);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if(position != RecyclerView.NO_POSITION) {
+                        if(mListener != null) {
+                            mListener.onItemClick(v, position);
+                        }
+                    }
+                }
+            });
         }
     }
 
