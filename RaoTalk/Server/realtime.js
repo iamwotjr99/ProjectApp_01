@@ -44,7 +44,7 @@ io.on('connection', (socket) => {
 
             let sql = 'INSERT INTO msg (room_id, user_id, msg) VALUES (?, ?, ?)'
 
-            conn.query(sql, [user_id, room_id, message], (err, result) => {
+            conn.query(sql, [room_id, user_id, message], (err, result) => {
                 if(err) {
                     err.code = 500;
                     conn.release();
