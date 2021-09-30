@@ -7,6 +7,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -42,6 +43,9 @@ public interface RetrofitAPI {
 
     @GET("/get/calendar/{cost}/{memo}")
     Call<List<Constructor>> getCalendar(@Path("cost") int cost, @Path("memo") String memo);
+
+    @DELETE("/delete/calendar/{cost}/{memo}/{date}")
+    Call<Constructor> deleteCalendar(@Path("cost") int cost, @Path("memo") String memo, @Path("date") String date);
 
     @POST("/post/{user_id}/chatList/{roomName}")
     Call<Room> postChatList(@Path("user_id") int user_id, @Path("roomName") String roomName);

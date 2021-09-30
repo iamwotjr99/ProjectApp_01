@@ -53,9 +53,6 @@ public class CostActivity extends AppCompatActivity implements Serializable {
             public void onClick(View v) {
                 int cost = Integer.parseInt(today_cost.getText().toString());
                 String memo = today_memo.getText().toString();
-                Log.d("cost", String.valueOf(cost));
-                Log.d("memo", memo);
-                Log.d("date", getTime());
                 Call<Constructor> call = retrofitService.postCalendar(cost, memo, getTime());
                 call.enqueue(new Callback<Constructor>() {
                     @Override
@@ -71,6 +68,34 @@ public class CostActivity extends AppCompatActivity implements Serializable {
                     @Override
                     public void onFailure(Call<Constructor> call, Throwable t) {
                             Log.d("FailurePostCall", t.getMessage());
+                    }
+                });
+            }
+        });
+
+        btn_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int cost = Integer.parseInt(today_cost.getText().toString());
+                String memo = today_memo.getText().toString();
+                Log.d("delete_cost", String.valueOf(cost));
+                Log.d("delete_memo", memo);
+                Log.d("delete_date", getTime());
+                Call<Constructor> call = retrofitService.deleteCalendar(cost, memo, getTime());
+                call.enqueue(new Callback<Constructor>() {
+                    @Override
+                    public void onResponse(Call<Constructor> call, Response<Constructor> response) {
+                        if(response.isSuccessful()) {
+                            Constructor constructorResult = response.body();
+                            finish();
+                        } else {
+                            Log.d("ResponsePostCall", "실패");
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Constructor> call, Throwable t) {
+                        Log.d("FailurePostCall", t.getMessage());
                     }
                 });
             }
