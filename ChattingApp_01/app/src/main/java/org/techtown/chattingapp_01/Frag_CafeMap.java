@@ -17,6 +17,7 @@ import android.widget.ScrollView;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 public class Frag_CafeMap extends Fragment {
 
@@ -28,12 +29,15 @@ public class Frag_CafeMap extends Fragment {
     private Frag_fiveThousand frag_FiveThousand;
     private ScrollView scrollView;
     private WebView webView;
+    private FragmentTransaction mFragmentTransaction;
 
     @Override
     public View onCreate(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.frag_cafeMap, container, false);
 
         scrollView = view.findViewById(R.id.scrollView);
+
+        childFragmentManager().beginTransaction().replace(R.id.lobby_container, frag_OneThousand).commit();
 
 //        toolbar = view.findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
