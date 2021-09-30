@@ -34,6 +34,7 @@
         <activity android:name=".AddFriendActivity"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".CafeMapActivity"></activity>
+        <activity android:name=".InviteFriendActivity"></activity>
     </application>
 
 </manifest>
