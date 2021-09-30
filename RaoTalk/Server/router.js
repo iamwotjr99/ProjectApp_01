@@ -389,7 +389,7 @@ router.delete('/delete/calendar/:date/user/:user_id', (req, res) => {
             console.log("error");
             return err;
         }
-        let sql = ' DELETE FROM Calender WHERE date=? AND user_id = ?'
+        let sql = ' DELETE FROM Calender WHERE Date=? AND user_id = ?'
 
         conn.query(sql, [date, user_id], (err, result) => {
             if(err) {
