@@ -41,7 +41,7 @@ public interface RetrofitAPI {
     @POST("/post/calendar/{cost}/{memo}/{date}")
     Call<Constructor> postCalendar(@Path("cost") int cost, @Path("memo") String memo, @Path("date") String date);
 
-    @GET("/get/calendar/{cost}/{memo}")
+    @GET("/get/calendar/{cost}/{memo}/{date}")
     Call<List<Constructor>> getCalendar(@Path("cost") int cost, @Path("memo") String memo, @Path("date") String date);
 
     @DELETE("/delete/calendar/{cost}/{memo}/{date}")
