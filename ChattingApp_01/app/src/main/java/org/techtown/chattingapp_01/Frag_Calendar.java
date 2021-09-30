@@ -27,6 +27,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Frag_Calendar extends Fragment {
     private int mCost;
     private String mMemo;
+    private int mUserId;
 
     private ImageButton button;
     private CalendarAdapter mAdapter;
@@ -48,6 +49,7 @@ public class Frag_Calendar extends Fragment {
 
         mCost = getArguments().getInt("cost");
         mMemo = getArguments().getString("memo");
+        mUserId = getArguments().getInt("userID");
 
         textView_date = view.findViewById(R.id.textView_date);
         textView_date.setText(getTime());
@@ -57,6 +59,7 @@ public class Frag_Calendar extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), CostActivity.class);
+                intent.putExtra("user_id", mUserId);
                 startActivity(intent);
             }
         });
@@ -68,7 +71,7 @@ public class Frag_Calendar extends Fragment {
 
         RetrofitAPI retrofitService = retrofit.create(RetrofitAPI.class);
 
-        Call<List<Constructor>> call = retrofitService.getCalendar(mCost, mMemo, getTime());
+        Call<List<Constructor>> call = retrofitService.getCalendar(getTime(), mUserId);
         call.enqueue(new Callback<List<Constructor>>() {
             @Override
             public void onResponse(Call<List<Constructor>> call, Response<List<Constructor>> response) {
@@ -94,6 +97,31 @@ public class Frag_Calendar extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new CalendarAdapter(getContext(), mList);
         recyclerView.setAdapter(mAdapter);
+
+        mAdapter.setOnItemClickListener(new CalendarAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                int cost = mCost;
+                String memo = mMemo;
+                Call<Constructor> call = retrofitService.deleteCalendar(getTime(), mUserId);
+                call.enqueue(new Callback<Constructor>() {
+                    @Override
+                    public void onResponse(Call<Constructor> call, Response<Constructor> response) {
+                        if(response.isSuccessful()) {
+                            Constructor constructorResult = response.body();
+                            mList.remove(position);
+                        } else {
+                            Log.d("ResponsePostCall", "실패");
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Constructor> call, Throwable t) {
+                        Log.d("FailurePostCall", t.getMessage());
+                    }
+                });
+            }
+        });
 
         return view;
     }

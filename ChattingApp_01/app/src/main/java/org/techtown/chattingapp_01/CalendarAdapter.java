@@ -15,6 +15,15 @@ import java.util.List;
 
 public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.ViewHolder> {
 
+    public interface OnItemClickListener {
+        void onItemClick(View v, int position);
+    }
+
+    private OnItemClickListener mListener = null;
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.mListener = listener;
+    }
     private List<Constructor> mList = new ArrayList<Constructor>();
 
     public CalendarAdapter(Context context, List<Constructor> mList) {
@@ -43,7 +52,6 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.ViewHo
         Constructor constructor = mList.get(position);
         holder.tv_cost.setText(constructor.getCost());
         holder.tv_memo.setText(constructor.getMemo());
-        Log.d("mLsit", mList.get(0).getCost());
     }
 
     public void addItem(Constructor cost, Constructor memo){
@@ -51,7 +59,7 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.ViewHo
         mList.add(memo);
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tv_cost;
         TextView tv_memo;
 
@@ -60,6 +68,18 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.ViewHo
 
             tv_cost = (TextView) itemView.findViewById(R.id.textView_title_cost);
             tv_memo = (TextView) itemView.findViewById(R.id.textView_desc_memo);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if(position != RecyclerView.NO_POSITION) {
+                        if(mListener != null) {
+                            mListener.onItemClick(v, position);
+                        }
+                    }
+                }
+            });
         }
 
         public void setItem(Constructor item){

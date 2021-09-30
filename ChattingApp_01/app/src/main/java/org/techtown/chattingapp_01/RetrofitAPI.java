@@ -38,14 +38,14 @@ public interface RetrofitAPI {
     @GET("/get/{user_id}/friendsList/")
     Call<List<Friends>> getFriends(@Path("user_id") int user_id);
 
-    @POST("/post/calendar/{cost}/{memo}/{date}")
-    Call<Constructor> postCalendar(@Path("cost") int cost, @Path("memo") String memo, @Path("date") String date);
+    @POST("/post/calendar/{cost}/{memo}/{date}/user/{user_id}")
+    Call<Constructor> postCalendar(@Path("cost") int cost, @Path("memo") String memo, @Path("date") String date, @Path("user_id") int user_id);
 
-    @GET("/get/calendar/{cost}/{memo}/{date}")
-    Call<List<Constructor>> getCalendar(@Path("cost") int cost, @Path("memo") String memo, @Path("date") String date);
+    @GET("/get/calendar/{date}/user/{user_id}")
+    Call<List<Constructor>> getCalendar(@Path("date") String date, @Path("user_id") int user_id);
 
-    @DELETE("/delete/calendar/{cost}/{memo}/{date}")
-    Call<Constructor> deleteCalendar(@Path("cost") int cost, @Path("memo") String memo, @Path("date") String date);
+    @DELETE("/delete/calendar/{date}/user/{user_id}")
+    Call<Constructor> deleteCalendar(@Path("date") String date, @Path("user_id") int user_id);
 
     @POST("/post/{user_id}/chatList/{roomName}")
     Call<Room> postChatList(@Path("user_id") int user_id, @Path("roomName") String roomName);

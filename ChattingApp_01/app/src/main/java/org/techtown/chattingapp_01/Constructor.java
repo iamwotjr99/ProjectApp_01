@@ -4,13 +4,13 @@ import com.google.gson.annotations.SerializedName;
 
 public class Constructor {
 
-    @SerializedName("cost")
+    @SerializedName("Cost")
     private String cost;
 
-    @SerializedName("memo")
+    @SerializedName("Memo")
     private String memo;
 
-    @SerializedName("date")
+    @SerializedName("Date")
     private String date;
 
     public String getCost() { return cost; }
