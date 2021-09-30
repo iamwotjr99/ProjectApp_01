@@ -348,7 +348,7 @@ router.post('/post/calendar/:cost/:memo/:date', (req, res) => {
 })
 
 //캘린더 정보 보내기
-router.get('/get/calendar/:cost/:memo/:date', (req, res) => {
+router.get('/get/calendar/:date', (req, res) => {
     let date = req.params.date;
 
     console.log("{date}: ", date);
