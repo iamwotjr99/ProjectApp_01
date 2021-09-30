@@ -316,20 +316,79 @@ router.post("/post/invite/:user_id/:room_id", (req, res) => {
     })
 })
 
-// Cost Calender insert values
-router.post('/post/calender', (req, res) => {
-    let Month = req.body.Month;
-    let Day = req.body.Day;
-    let Cost = req.body.Cost;
+//캘린더 내용 설정
+router.post('/post/calendar/:cost/:memo/:date', (req, res) => {
+    let cost = req.params.cost;
+    let memo = req.params.memo;
+    let date = req.params.date;
+
+    console.log("Post: {cost}: ", cost, ", {memo}: ", memo, ", {date}: ", date);
+    dbPool.getConnection((err, conn) => {
+        if(err) {
+            err.code = 500;
+            return err;
+        }
+        
+        let sql = 'INSERT INTO Calender (Date, Cost, Memo) VALUES(?,?,?);'
+
+        
+        conn.query(sql, [date, memo, cost], (err, result) => {
+            if(err) {
+                err.code = 500;
+                conn.release();
+                return err;
+            }
+            
+            res.send(result);
+            conn.release();
+            console.log(result);
+            console.log('Post Success!');
+        })
+    })
+})
+
+//캘린더 정보 보내기
+router.get('/get/calendar/:cost/:memo/:date', (req, res) => {
+    let date = req.params.date;
+
+    console.log("{date}: ", date);
+    dbPool.getConnection((err, conn) => {
+        if(err) {
+            err.code = 500;
+            return err;
+        }
+
+        let sql = 'SELECT * FROM Calender WHERE Date = ?';
     
+        conn.query(sql, date, (err, result) => {
+
+            if(err) {
+                err.code = 500;
+                conn.release();
+                return err;
+            }
+            
+            res.send(result);
+            conn.release();
+            console.log(result);
+            console.log('Get Success!');
+        })
+    })
+})
+
+//캘린더 값 삭제 
+router.delete('/delete/calendar/:date', (req, res) => {
+    let date = req.params.date;
+
     dbPool.getConnection((err, conn) => {
         if(err) {
             err.code = 500;
             console.log("error");
             return err;
         }
-        let sql = 'INSERT INTO Calender (Month, Day, Cost) VALUES(?,?,?);'
-        conn.query(sql, [Month, Day, Cost], (err, result) => {
+        let sql = ' DELETE FROM Calender WHERE date=?'
+
+        conn.query(sql, [cost, date], (err, result) => {
             if(err) {
                 err.code = 500;
                 console.log("error");
@@ -338,65 +397,11 @@ router.post('/post/calender', (req, res) => {
             }
 
             conn.release();
-            console.log(Month, Day, Cost);
-            console.log('Post Success!');
+            console.log(cost, date);
+            res.send(result);
+            console.log('Delete Success!');
         })
     })
-});
-
-//Cost Calener show values
-router.get('/get/Calender/:Month/:Day/:Cost', (req, res) => {
-    let Month = req.params.Month;
-    let Day = req.params.Day;
-    let Cost = req.params.Cost;
-
-    console.log(Month, Day, Cost);
-    dbPool.getConnection((err, conn) => {
-        if(err) {
-            err.code = 500;
-            return err;
-        }
-        
-        let sql = 'SELECT * FROM Calender WHERE Month = ? AND Day = ? AND Cost = ?';
-    
-        conn.query(sql, [Month, Day, Cost], (err, result) => {
-            if(err) {
-                err.code = 500;
-                conn.release();
-                return err;
-            }
-            
-            res.send(result[0]);
-            conn.release();
-            console.log(result[0]);
-            console.log('Get Success!');
-        })
-    })
-});
-
-//캘린더 내용 설정
-let costList = [];
-router.post('/post/calendar/:cost/:memo/:date', (req, res) => {
-    let cost = req.params.cost;
-    let memo = req.params.memo;
-    let date = req.params.date;
-    console.log("Post: {cost}: ", cost, ", {memo}: ", memo, ", {date}: ", date);
-    let result = {
-        cost : cost,
-        memo : memo,
-        date : date
-    }
-    res.send(result);
-    costList.push(result);
-})
-
-router.get('/get/calendar/:cost/:memo/:date', (req, res) => {
-    let cost = req.params.cost;
-    let memo = req.params.memo;
-    let date = req.params.date;
-    console.log("Get: {cost}: ", cost, ", {memo}: ", memo, ", {date}: ", date);
-    res.send(costList);
-    console.log(costList);
 })
 
 //채팅방 목록
