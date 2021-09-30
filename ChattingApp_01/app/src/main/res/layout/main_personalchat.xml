@@ -20,7 +20,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageButton
-                android:id="@+id/imgeButton_back"
+                android:id="@+id/imgButton_back"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:background="@color/light_blue_50"
@@ -34,17 +34,17 @@
                 android:src="@drawable/friend" />
 
             <TextView
-                android:id="@+id/textView_otherPerson"
+                android:id="@+id/textView_room_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginLeft="10dp"
-                android:text="상대방 이름"
+                android:text="채팅방 이름"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
             <ImageButton
-                android:id="@+id/imgButton_menu"
+                android:id="@+id/imgButton_invite"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_gravity="right"

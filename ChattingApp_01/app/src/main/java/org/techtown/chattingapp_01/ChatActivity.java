@@ -11,6 +11,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
@@ -31,6 +33,8 @@ import io.socket.emitter.Emitter;
 
 public class ChatActivity extends AppCompatActivity {
     private static final String TAG = "ChatActivity";
+
+    private TextView roomName;
 
     private Socket mSocket;
     private List<Message> mMessages = new ArrayList<Message>();
@@ -54,10 +58,18 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_personalchat);
 
-        mUsername = getIntent().getExtras().getString("username");
+        mUsername = getIntent().getExtras().getString("userName");
         mUserID = getIntent().getExtras().getInt("userID");
         roomID = getIntent().getExtras().getInt("roomID");
         intentRoomName = getIntent().getExtras().getString("roomName");
+
+        Log.d("userName", mUsername);
+        Log.d("mUserID", String.valueOf(mUserID));
+        Log.d("roomID", String.valueOf(roomID));
+        Log.d("intentRoomName", intentRoomName);
+
+        roomName = findViewById(R.id.textView_room_name);
+        roomName.setText(intentRoomName);
 
         ChatApplication app = (ChatApplication) getApplication();
         mSocket = app.getSocket();
@@ -111,7 +123,7 @@ public class ChatActivity extends AppCompatActivity {
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("Working Button", "Success");
+                Log.d("send Button", "Success");
                 attemptSend();
             }
         });
@@ -133,6 +145,14 @@ public class ChatActivity extends AppCompatActivity {
                         break;
                 }
                 return false;
+            }
+        });
+
+        ImageButton btnBackImg = findViewById(R.id.imgButton_back);
+        btnBackImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

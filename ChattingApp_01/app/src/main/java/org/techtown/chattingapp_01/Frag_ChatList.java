@@ -89,7 +89,8 @@ public class Frag_ChatList extends Fragment {
                     List<Room> res = response.body();
                     for(int i=0; i<res.size(); i++) {
                         if(mList.size() != res.size()) {
-                            mList.add(new Room(roomProfileUri, res.get(i).getRoomName()));
+                            mList.add(new Room(roomProfileUri, res.get(i).getRoomName(),
+                                    res.get(i).getRoomID()));
                             mAdapter.notifyDataSetChanged();
                         }
                     }
