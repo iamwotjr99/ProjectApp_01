@@ -11,7 +11,7 @@ public class Frag_twoThousand extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment2, container, false);
+        return inflater.inflate(R.layout.frag_two_thousand, container, false);
 
     }
 }

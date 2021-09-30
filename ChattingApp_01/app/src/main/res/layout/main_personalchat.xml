@@ -28,8 +28,8 @@
 
             <ImageView
                 android:id="@+id/imgButton_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_marginLeft="30dp"
                 android:src="@drawable/friend" />
 
@@ -41,7 +41,8 @@
                 android:layout_marginLeft="10dp"
                 android:text="채팅방 이름"
                 android:textColor="@color/black"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:fontFamily="@font/dream4"/>
 
             <ImageButton
                 android:id="@+id/imgButton_invite"
@@ -72,29 +73,23 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
-            <ImageButton
-                android:id="@+id/imageButton_add"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:background="@color/white"
-                android:src="@drawable/btn_add"
-                android:layout_weight="0.1"
-                />
-
             <EditText
                 android:id="@+id/editText_input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="9.8"
-                />
+                android:layout_marginHorizontal="15dp"
+                android:fontFamily="@font/dream3"/>
 
             <Button
                 android:id="@+id/button_send"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/grey_400"
+                android:layout_weight="0.1"
+                android:background="#70AAB1"
+                android:fontFamily="@font/dream5"
                 android:text="보내기"
-                android:layout_weight="0.1"/>
+                android:textColor="#FFFFFF" />
 
             </LinearLayout>
 
@@ -102,9 +97,5 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <include
-        layout="@layout/drawer_personalchat">
-    </include>
 
 </androidx.drawerlayout.widget.DrawerLayout>

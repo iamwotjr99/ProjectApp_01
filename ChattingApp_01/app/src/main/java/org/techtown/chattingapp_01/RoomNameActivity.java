@@ -1,12 +1,11 @@
 package org.techtown.chattingapp_01;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,7 +24,7 @@ public class RoomNameActivity extends Activity {
     private ChatListAdapter mAdapter;
     private List<Room> mLsit = new ArrayList<Room>();
 
-    private ImageButton imageButton;
+    private Button button;
     private EditText editText_roomName;
     private String imageUri;
 
@@ -46,8 +45,8 @@ public class RoomNameActivity extends Activity {
         mUserID = getIntent().getExtras().getInt("userID");
 
         editText_roomName = (EditText) findViewById(R.id.editText_roomName_input);
-        imageButton = (ImageButton) findViewById(R.id.imageButton_roomName_add);
-        imageButton.setOnClickListener(new View.OnClickListener() {
+        button = (Button) findViewById(R.id.imageButton_roomName_add);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String roomName = editText_roomName.getText().toString();

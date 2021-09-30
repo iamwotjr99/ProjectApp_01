@@ -21,33 +21,9 @@
         android:textColor="#333333"
         android:layout_marginRight="16dp"
         app:layout_constraintEnd_toStartOf="@id/sander_profile"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/dream5"/>
 
-    <ImageView
-        android:id="@+id/sender_pic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sender_name"
-        android:layout_marginRight="16dp"
-        android:padding="12dp"
-        android:maxWidth="350dp"
-        android:background="@drawable/chat_my_msgbox"
-        android:textColor="#333333"
-        android:src="@drawable/friend"
-        app:layout_constraintEnd_toStartOf="@id/sander_profile"
-        app:layout_constraintTop_toBottomOf="@id/sender_name"
-        android:visibility="invisible"/>
-
-    <TextView
-        android:id="@+id/sender_pic_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="13:35"
-        android:textSize="12sp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toStartOf="@id/sender_pic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="invisible"/>
 
     <TextView
         android:id="@+id/sender_msg"
@@ -58,6 +34,7 @@
         android:maxWidth="250dp"
         android:padding="12dp"
         android:text="Hello android"
+        android:fontFamily="@font/dream4"
         android:textColor="#333333"
         app:layout_constraintEnd_toStartOf="@id/sander_profile"
         app:layout_constraintTop_toBottomOf="@id/sender_name"
@@ -69,12 +46,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="4dp"
         android:text="13:35"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/sender_msg"
         app:layout_constraintRight_toLeftOf="@id/sender_msg"
-        android:visibility="visible"/>
+        android:visibility="visible"
+        android:fontFamily="@font/dream4"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

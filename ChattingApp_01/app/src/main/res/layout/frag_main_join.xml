@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@color/grey_100"
+            android:fontFamily="@font/dream5"
             android:hint="Email"
             android:inputType="textCapWords"
             android:padding="10dp"
@@ -35,7 +36,8 @@
             android:hint="password"
             android:padding="10dp"
             android:textColor="@color/black"
-            android:textColorHint="@color/grey_400" />
+            android:textColorHint="@color/grey_400"
+            android:fontFamily="@font/dream5"/>
 
         <EditText
             android:id="@+id/join_name"
@@ -43,19 +45,21 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@color/grey_100"
-            android:hint="이름"
+            android:hint="nickname"
             android:padding="10dp"
             android:textColor="@color/black"
-            android:textColorHint="@color/grey_400" />
+            android:textColorHint="@color/grey_400"
+            android:fontFamily="@font/dream5"/>
 
         <Button
             android:id="@+id/btn_join"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:background="@color/grey_500"
+            android:background="#70AAB1"
             android:text="회원가입"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:fontFamily="@font/dream9"/>
 
     </LinearLayout>
 </LinearLayout>

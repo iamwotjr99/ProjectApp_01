@@ -49,7 +49,6 @@ public class Frag_FriendList extends Fragment {
 
             imageProfile = view.findViewById(R.id.image_profile);
             tvName = view.findViewById(R.id.tv_name);
-            btnSearch = view.findViewById(R.id.btn_search);
             btnAddFriend = view.findViewById(R.id.btn_addFriend);
 
             // mUserProfileUri = Uri.parse(mUserProfile);

@@ -14,7 +14,8 @@
         android:layout_marginTop="20dp"
         android:textSize="30sp"
         android:textColor="@color/black"
-        android:text="친구추가 하기">
+        android:text="친구추가 하기"
+        android:fontFamily="@font/dream6">
 
     </TextView>
 
@@ -28,8 +29,7 @@
         android:imeOptions="actionDone"
         app:layout_constraintTop_toBottomOf="@id/tv_guideText"
         android:layout_marginTop="200dp"
-        android:hint="친구 아이디 번호"
-        ></EditText>
+        android:hint="친구 아이디 번호"></EditText>
 
     <TextView
         android:layout_width="wrap_content"
@@ -62,7 +62,8 @@
         app:layout_constraintTop_toBottomOf="@id/et_friendID"
         android:text="나의 아이디 번호"
         android:textColor="@color/blue_900"
-        android:layout_marginTop="35dp">
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/dream3">
 
     </TextView>
 
@@ -70,11 +71,14 @@
         android:id="@+id/btn_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_friendID"
         android:layout_marginTop="100dp"
-        android:text="추가">
+        android:background="#70AAB1"
+        android:text="추가"
+        android:textColor="#FFFFFF"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_friendID"
+        android:fontFamily="@font/dream7">
 
     </Button>
 

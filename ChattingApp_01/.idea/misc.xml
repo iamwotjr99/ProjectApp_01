@@ -34,33 +34,49 @@
         <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/main_groupchat.xml" value="0.1" />
         <entry key="..\:/GitHub/ProjectApp_01/ChattingApp_01/app/src/main/res/layout/main_personalchat.xml" value="0.1" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/drawable-v24/button_ui.xml" value="0.25" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/drawable/chat_my_msgbox.xml" value="0.3697916666666667" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/drawable/chat_other_msgbox.xml" value="0.3697916666666667" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/drawable/square_imageview_border.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/font/font.xml" value="0.21481481481481482" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activitiy_add_friend.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_calendar_main.xml" value="0.264" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_chat_main.xml" value="0.24114583333333334" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_chatlist_main.xml" value="0.3536458333333333" />
-        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_cost_main.xml" value="0.20923913043478262" />
-        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_main.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_cost_main.xml" value="0.4" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_invite_friend.xml" value="0.3536458333333333" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_map.xml" value="0.1" />
-        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_roomname_main.xml" value="0.24114583333333334" />
-        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_set_profile.xml" value="0.1" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_roomname_main.xml" value="0.264" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_set_profile.xml" value="0.4" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/activity_sgin_up.xml" value="0.264" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/drawer_grouplchat.xml" value="0.3536458333333333" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/drawer_personalchat.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/frag_cafeMap.xml" value="0.3536458333333333" />
-        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/frag_cafe_map.xml" value="0.225" />
-        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/frag_calendar.xml" value="0.1" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/frag_cafe_map.xml" value="0.4" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/frag_calendar.xml" value="0.4" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/frag_chatbot.xml" value="0.16" />
-        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/frag_chatlist.xml" value="0.24114583333333334" />
-        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/frag_friendlist.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/frag_chatlist.xml" value="0.264" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/frag_friendlist.xml" value="0.4" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/frag_main_join.xml" value="0.3536458333333333" />
-        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/frag_main_login.xml" value="0.1431159420289855" />
-        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/fragment1.xml" value="0.1" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/frag_main_login.xml" value="0.4" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/frag_setting.xml" value="0.3536458333333333" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/fragment1.xml" value="0.4" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/fragment2.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/fragment3.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/fragment4.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/item_calendar_list.xml" value="0.3536458333333333" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/item_chat_action.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/item_chat_list.xml" value="0.3536458333333333" />
-        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/item_main_chat_me.xml" value="0.24114583333333334" />
-        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/item_main_chat_other.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/item_chat_log.xml" value="0.3536458333333333" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/item_chat_message.xml" value="0.3536458333333333" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/item_drawer_groupchat.xml" value="0.3536458333333333" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/item_drawer_personalchat.xml" value="0.3536458333333333" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/item_friend.xml" value="0.3536458333333333" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/item_friendlist.xml" value="0.3536458333333333" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/item_main_chat_me.xml" value="0.4" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/item_main_chat_other.xml" value="0.4" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/main_beginscr.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/main_personalchat.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/square_imageview_border.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/layout/today_cost.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/leele/Documents/GitHub/ProjectApp_01-1/ChattingApp_01/app/src/main/res/menu/menu_bottom.xml" value="0.340625" />

@@ -69,7 +69,7 @@ public class Frag_ChatList extends Fragment {
             }
         });
 
-        String roomProfileString = "android.resource://org.techtown.chattingapp_01/drawable/" + "img_person";
+        String roomProfileString = "android.resource://org.techtown.chattingapp_01/drawable/" + "message";
         Uri roomProfileUri = Uri.parse(roomProfileString);
 
         Retrofit retrofit = new Retrofit.Builder()

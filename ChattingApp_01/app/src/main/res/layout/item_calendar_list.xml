@@ -10,15 +10,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/textView_title_cost"
+        android:text="cost"
+        android:gravity="center_vertical"
         android:layout_weight="5"
-        android:textColor="@color/black">
+        android:textColor="@color/black"
+        android:fontFamily="@font/dream5"
+        android:paddingLeft="8dp">
     </TextView>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/textView_desc_memo"
-        android:layout_weight="5">
+        android:text="memo"
+        android:gravity="center_vertical"
+        android:layout_weight="5"
+        android:fontFamily="@font/dream5"
+        android:paddingLeft="8dp">
     </TextView>
 
 
