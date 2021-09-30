@@ -3,6 +3,7 @@ package org.techtown.chattingapp_01;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -69,6 +70,10 @@ public class MainActivity extends AppCompatActivity {
                                         .replace(R.id.lobby_container, frag_chatList)
                                         .commit();
                                 return true;
+
+                            case R.id.tab_cafe:
+                                Intent intent = new Intent(MainActivity.this, CafeMapActivity.class);
+                                startActivity(intent);
 
                             case R.id.tab_expend:
                                 getSupportFragmentManager().beginTransaction()

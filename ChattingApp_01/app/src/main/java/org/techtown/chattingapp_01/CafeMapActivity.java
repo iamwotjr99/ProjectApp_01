@@ -50,7 +50,7 @@ public class CafeMapActivity extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("http://172.23.12.39:5000/qgis2web0");
+        webView.loadUrl("http://ec2-15-164-230-128.ap-northeast-2.compute.amazonaws.com:5000/qgis2web0");
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, frag_OneThousand).commit();
 
@@ -67,24 +67,23 @@ public class CafeMapActivity extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
 
                 int position = tab.getPosition();
-                Log.d("MainActivity", "선택된 탭 : " + position);
 
                 Fragment selected = null;
                 if (position == 0) {
                     selected = frag_OneThousand;
-                    webView.loadUrl("http://172.23.12.39:5000/qgis2web1");
+                    webView.loadUrl("http://ec2-15-164-230-128.ap-northeast-2.compute.amazonaws.com:5000/qgis2web1");
                 } else if (position == 1) {
                     selected = frag_TwoThousand;
-                    webView.loadUrl("http://172.23.12.39:5000/qgis2web2");
+                    webView.loadUrl("http://ec2-15-164-230-128.ap-northeast-2.compute.amazonaws.com:5000/qgis2web2");
                 } else if (position == 2) {
                     selected = frag_ThreeThousand;
-                    webView.loadUrl("http://172.23.12.39:5000/qgis2web3");
+                    webView.loadUrl("http://ec2-15-164-230-128.ap-northeast-2.compute.amazonaws.com:5000/qgis2web3");
                 } else if (position == 3) {
                     selected = frag_FourThousand;
-                    webView.loadUrl("http://172.23.12.39:5000/qgis2web4");
+                    webView.loadUrl("http://ec2-15-164-230-128.ap-northeast-2.compute.amazonaws.com:5000/qgis2web4");
                 } else if (position == 4) {
                     selected = frag_FiveThousand;
-                    webView.loadUrl("http://172.23.12.39:5000/qgis2web5");
+                    webView.loadUrl("http://ec2-15-164-230-128.ap-northeast-2.compute.amazonaws.com:5000/qgis2web5");
                 }
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.container, selected).commit();
