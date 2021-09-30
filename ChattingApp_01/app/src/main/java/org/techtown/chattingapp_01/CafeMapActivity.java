@@ -7,9 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ScrollView;
@@ -17,9 +15,8 @@ import android.widget.ScrollView;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
-public class Frag_CafeMap extends Fragment {
+public class CafeMapActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private Frag_oneThousand frag_OneThousand;
@@ -29,21 +26,20 @@ public class Frag_CafeMap extends Fragment {
     private Frag_fiveThousand frag_FiveThousand;
     private ScrollView scrollView;
     private WebView webView;
-    private FragmentTransaction mFragmentTransaction;
 
     @Override
-    public View onCreate(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.frag_cafeMap, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
 
-        scrollView = view.findViewById(R.id.scrollView);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.frag_cafe_map);
 
-        childFragmentManager().beginTransaction().replace(R.id.lobby_container, frag_OneThousand).commit();
+        scrollView = findViewById(R.id.scrollView);
 
-//        toolbar = view.findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//
-//        ActionBar actionBar = getSupportActionBar();
-//        actionBar.setDisplayShowTitleEnabled(false);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(false);
 
         frag_OneThousand = new Frag_oneThousand();
         frag_TwoThousand = new Frag_twoThousand();
@@ -51,14 +47,14 @@ public class Frag_CafeMap extends Fragment {
         frag_FourThousand = new Frag_fourThousand();
         frag_FiveThousand = new Frag_fiveThousand();
 
-        webView = view.findViewById(R.id.webView);
+        webView = (WebView) findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("http://172.23.12.39:5000/qgis2web0");
 
-        //getSupportFragmentManager().beginTransaction().replace(R.id.container, frag_OneThousand).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, frag_OneThousand).commit();
 
-        TabLayout tabs = view.findViewById(R.id.tabs);
+        TabLayout tabs = findViewById(R.id.tabs);
         tabs.addTab(tabs.newTab().setText("1000"));
         tabs.addTab(tabs.newTab().setText("2000"));
         tabs.addTab(tabs.newTab().setText("3000"));
@@ -90,8 +86,8 @@ public class Frag_CafeMap extends Fragment {
                     selected = frag_FiveThousand;
                     webView.loadUrl("http://172.23.12.39:5000/qgis2web5");
                 }
-//                getSupportFragmentManager().beginTransaction()
-//                        .replace(R.id.container, selected).commit();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.container, selected).commit();
             }
 
             @Override
@@ -102,8 +98,6 @@ public class Frag_CafeMap extends Fragment {
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
-
-        return view;
     }
 
     public void onButton1Clicked(View v) {
@@ -2233,5 +2227,6 @@ public class Frag_CafeMap extends Fragment {
     public void onButton709Clicked(View v) {
         Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.naver.com/ariel94924/222428655031"));
         startActivity(myIntent); }
+
 }
 
