@@ -332,7 +332,7 @@ router.post('/post/calendar/:cost/:memo/:date', (req, res) => {
         let sql = 'INSERT INTO Calender (Date, Cost, Memo) VALUES(?,?,?);'
 
         
-        conn.query(sql, [date, memo, cost], (err, result) => {
+        conn.query(sql, [date, cost, memo], (err, result) => {
             if(err) {
                 err.code = 500;
                 conn.release();
@@ -388,7 +388,7 @@ router.delete('/delete/calendar/:date', (req, res) => {
         }
         let sql = ' DELETE FROM Calender WHERE date=?'
 
-        conn.query(sql, [cost, date], (err, result) => {
+        conn.query(sql, date, (err, result) => {
             if(err) {
                 err.code = 500;
                 console.log("error");
@@ -397,7 +397,7 @@ router.delete('/delete/calendar/:date', (req, res) => {
             }
 
             conn.release();
-            console.log(cost, date);
+            console.log(date);
             res.send(result);
             console.log('Delete Success!');
         })
