@@ -317,10 +317,11 @@ router.post("/post/invite/:user_id/:room_id", (req, res) => {
 })
 
 //캘린더 내용 설정
-router.post('/post/calendar/:cost/:memo/:date', (req, res) => {
+router.post('/post/calendar/:cost/:memo/:date/user/:user_id', (req, res) => {
     let cost = req.params.cost;
     let memo = req.params.memo;
     let date = req.params.date;
+    let user_id = req.params.user_id;
 
     console.log("Post: {cost}: ", cost, ", {memo}: ", memo, ", {date}: ", date);
     dbPool.getConnection((err, conn) => {
@@ -329,10 +330,10 @@ router.post('/post/calendar/:cost/:memo/:date', (req, res) => {
             return err;
         }
         
-        let sql = 'INSERT INTO Calender (Date, Cost, Memo) VALUES(?,?,?);'
+        let sql = 'INSERT INTO Calender (user_id, Date, Cost, Memo) VALUES(?,?,?,?);'
 
         
-        conn.query(sql, [date, cost, memo], (err, result) => {
+        conn.query(sql, [user_id, date, cost, memo], (err, result) => {
             if(err) {
                 err.code = 500;
                 conn.release();
@@ -348,8 +349,9 @@ router.post('/post/calendar/:cost/:memo/:date', (req, res) => {
 })
 
 //캘린더 정보 보내기
-router.get('/get/calendar/:date', (req, res) => {
+router.get('/get/calendar/:date/user/:user_id', (req, res) => {
     let date = req.params.date;
+    let user_id = req.params.user_id;
 
     console.log("{date}: ", date);
     dbPool.getConnection((err, conn) => {
@@ -358,9 +360,9 @@ router.get('/get/calendar/:date', (req, res) => {
             return err;
         }
 
-        let sql = 'SELECT * FROM Calender WHERE Date = ?';
+        let sql = 'SELECT * FROM Calender WHERE Date = ? AND user_id = ?';
     
-        conn.query(sql, date, (err, result) => {
+        conn.query(sql, [date, user_id], (err, result) => {
 
             if(err) {
                 err.code = 500;
@@ -377,8 +379,9 @@ router.get('/get/calendar/:date', (req, res) => {
 })
 
 //캘린더 값 삭제 
-router.delete('/delete/calendar/:date', (req, res) => {
+router.delete('/delete/calendar/:date/user/:user_id', (req, res) => {
     let date = req.params.date;
+    let user_id = req.params.user_id;
 
     dbPool.getConnection((err, conn) => {
         if(err) {
@@ -386,9 +389,9 @@ router.delete('/delete/calendar/:date', (req, res) => {
             console.log("error");
             return err;
         }
-        let sql = ' DELETE FROM Calender WHERE date=?'
+        let sql = ' DELETE FROM Calender WHERE date=? AND user_id = ?'
 
-        conn.query(sql, date, (err, result) => {
+        conn.query(sql, [date, user_id], (err, result) => {
             if(err) {
                 err.code = 500;
                 console.log("error");
